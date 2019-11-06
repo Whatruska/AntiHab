@@ -12,12 +12,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="599.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="599.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Login.LoginController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="122.0" layoutX="-4.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="605.0" />
       <ImageView fitHeight="113.0" fitWidth="107.0" layoutX="36.0" layoutY="4.0">
          <image>
-            <Image url="@../../../res/iconfinder_java_401285.svg" />
+            <Image url="@../../../res/iconfinder_java_401285.png" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="201.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AntiHab" wrappingWidth="216.2060546875">
@@ -25,22 +25,22 @@
             <Font name="Avenir Next Bold" size="48.0" />
          </font>
       </Text>
-      <Button layoutX="187.0" layoutY="456.0" mnemonicParsing="false" styleClass="btn" text="Зарегистрироваться">
+      <Button fx:id="registerButton" layoutX="187.0" layoutY="456.0" mnemonicParsing="false" styleClass="btn" text="Зарегистрироваться">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="256.0" layoutY="347.0" mnemonicParsing="false" styleClass="btn" text="Войти">
+      <Button fx:id="loginButton" layoutX="256.0" layoutY="347.0" mnemonicParsing="false" styleClass="btn" text="Войти">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <PasswordField layoutX="176.0" layoutY="275.0" promptText="Пароль (я не смотрю)" styleClass="text-field">
+      <PasswordField fx:id="passwordField" layoutX="176.0" layoutY="275.0" promptText="Пароль (я не смотрю)" styleClass="text-field">
          <font>
             <Font size="19.0" />
          </font>
       </PasswordField>
-      <TextField layoutX="175.0" layoutY="187.0" promptText="Логин">
+      <TextField fx:id="loginField" layoutX="175.0" layoutY="187.0" promptText="Логин">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>

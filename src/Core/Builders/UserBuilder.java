@@ -13,6 +13,16 @@ public class UserBuilder {
         return null;
     }
 
+    public static UserBuilder name(String name){
+        user.setName(name);
+        return null;
+    }
+
+    public static UserBuilder surname(String surname){
+        user.setSurname(surname);
+        return null;
+    }
+
     public static UserBuilder tasks(ArrayList<Task> tasks){
         user.setTasks(tasks);
         return null;
