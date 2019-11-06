@@ -28,6 +28,11 @@ public class UserBuilder {
         return null;
     }
 
+    public static UserBuilder admin(boolean admin){
+        user.setAdmin(admin);
+        return null;
+    }
+
     public static User build(){
         return user;
     }

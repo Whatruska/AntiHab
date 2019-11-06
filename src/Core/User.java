@@ -8,8 +8,17 @@ public class User {
     private int bottomLimit;
     private int topLimit;
     private ArrayList<Task> tasks = new ArrayList<>();
+    private boolean isAdmin = false;
 
     public User() {}
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
 
     public String getLogin() {
         return login;
@@ -41,5 +50,9 @@ public class User {
 
     public void setTasks(ArrayList<Task> tasks) {
         this.tasks = tasks;
+    }
+
+    public void addTask(Task task){
+        tasks.add(task);
     }
 }
