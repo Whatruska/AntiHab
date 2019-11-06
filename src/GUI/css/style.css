@@ -1,0 +1,31 @@
+/*
+
+    white : #F0F0F0
+    black : #080A03
+    purple : #7955A3
+
+*/
+
+.main{
+    -fx-background-color: #F0F0F0;
+}
+
+.btn{
+    -fx-border-radius: 50%;
+    -fx-background-color: #080A03;
+    -fx-text-fill: #F0F0F0;
+}
+
+.text-field{
+    -fx-padding: 5px 10px;
+    -fx-background-color: #F0F0F0;
+    -fx-border-radius: 50% !important;
+    -fx-alignment: top-center;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-text-fill: black;
+}
+
+.btn:hover{
+    -fx-background-color: #7955A3;
+}
