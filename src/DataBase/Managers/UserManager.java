@@ -9,15 +9,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class UserManager {
+public class UserManager extends Manager {
 
-    private static final String SELECT_SQL = "SELECT * FROM `USERS` WHERE ";
+    private static final String SELECT_SQL = "SELECT * FROM `USERS`";
     private static final String REGISTER_SQL = "INSERT INTO `USERS` (`LOGIN`, `PASSWORD`, `SURNAME`, `NAME`, `IS_ADMIN`, `BOTTOM_LIMIT`, `TOP_LIMIT`) VALUES ('?', '?', '?', '?', '?', '?', '?')";
+    private static final String UPDATE_SQL = "UPDATE `USERS` SET LOGIN = `?`, SURNAME = `?`, NAME = `?`, IS_ADMIN = `?`, BOTTOM_LIMIT = `?`, TOP_LIMIT = `?`, TASKS = `?`";
     private static final String DELETE_SQL = "DELETE FROM `USERS` WHERE";
 
     public static User getUserByLogin(String login){
         try {
-            ResultSet result = Executor.executeSelect(SELECT_SQL + "LOGIN= \"" + login + "\"");
+            ResultSet result = Executor.executeSelect(SELECT_SQL + "WHERE LOGIN= \"" + login + "\"");
             if (result != null){
                 while (result.next()) {
                     return formUserFromSet(result);
@@ -31,7 +32,29 @@ public class UserManager {
     }
 
     public static ArrayList<String> getAllLogins(){
-        return new ArrayList<>();
+        ArrayList<String> result = new ArrayList<>();
+        try {
+            ResultSet set = Executor.executeSelect(SELECT_SQL);
+            while (set.next()){
+                result.add(set.getString("LOGIN"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public static String getPasswordFromDBByLogin(String login){
+        String pass = "";
+        try {
+            ResultSet set = Executor.executeSelect("SELECT `PASSWORD` FROM `USERS` WHERE LOGIN = \"" + login + "\"");
+            while (set.next()){
+                pass = set.getString("PASSWORD");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return pass;
     }
 
     public static void registerNewUser(User user, String password){
@@ -55,8 +78,27 @@ public class UserManager {
         }
     }
 
-    private static String addParamToSql(String sql, String param){
-        return sql.replaceFirst("[?]", param);
+    public static void updateUser(User user){
+        String sql = UPDATE_SQL;
+
+        sql = addParamToSql(sql, user.getLogin());
+
+        sql = addParamToSql(sql, user.getSurname());
+        sql = addParamToSql(sql, user.getName());
+
+        sql = addParamToSql(sql, user.isAdmin() ? "1" : "0");
+        sql = addParamToSql(sql, Integer.toString(user.getBottomLimit()));
+        sql = addParamToSql(sql, Integer.toString(user.getTopLimit()));
+
+        sql = addParamToSql(sql, taskListToString(user.getTasks()));
+
+        try {
+            Executor.execute(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     private static User formUserFromSet(ResultSet set) throws SQLException {

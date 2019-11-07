@@ -3,7 +3,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import Core.User;
+import DataBase.Encryptor;
 import DataBase.Managers.UserManager;
+import GUI.AuthorizedController;
 import GUI.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,13 +35,27 @@ public class LoginController extends Controller {
     @FXML
     void initialize() {
         loginButton.setOnAction(event -> {
-            loginButton.getScene().getWindow().hide();
-            showNewFXMLByName("Main");
+            if (login()) {
+                loginButton.getScene().getWindow().hide();
+                showNewFXMLByName("Main");
+            }
         });
 
         registerButton.setOnAction(event -> {
             registerButton.getScene().getWindow().hide();
             showNewFXMLByName("Register");
         });
+    }
+
+    private boolean login(){
+        String login = loginField.getText();
+        String password = UserManager.getPasswordFromDBByLogin(login);
+        String encryptedPassword = Encryptor.encrypt(passwordField.getText());
+        if (password != null && !password.equalsIgnoreCase("") && password.equalsIgnoreCase(encryptedPassword)){
+            User user = UserManager.getUserByLogin(login);
+            AuthorizedController.setClient(user);
+            return true;
+        }
+        return false;
     }
 }

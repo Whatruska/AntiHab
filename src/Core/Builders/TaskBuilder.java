@@ -2,8 +2,6 @@ package Core.Builders;
 
 import Core.Task;
 
-import java.util.ArrayList;
-
 public class TaskBuilder {
 
     private static Task task = new Task();
@@ -13,8 +11,8 @@ public class TaskBuilder {
         return null;
     }
 
-    public static TaskBuilder score(int score){
-        task.setScore(score);
+    public static TaskBuilder difficulty(int score){
+        task.setDifficulty(score);
         return null;
     }
 
@@ -23,7 +21,12 @@ public class TaskBuilder {
         return null;
     }
 
-    public static TaskBuilder occupied(boolean isOcupied){
+    public static TaskBuilder ocupiedBy(int by){
+        task.setOcupiedBy(by);
+        return null;
+    }
+
+    public static TaskBuilder ocupied(boolean isOcupied){
         task.setOcupied(isOcupied);
         return null;
     }

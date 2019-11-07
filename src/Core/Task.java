@@ -1,15 +1,22 @@
 package Core;
 
-import java.util.ArrayList;
-
 public class Task {
 
     private int number;
-    private int score;
+    private int difficulty;
     private String url;
     private boolean isOcupied;
+    private int ocupiedBy;
 
     public Task() {}
+
+    public int getOcupiedBy() {
+        return ocupiedBy;
+    }
+
+    public void setOcupiedBy(int ocupiedBy) {
+        this.ocupiedBy = ocupiedBy;
+    }
 
     public int getNumber() {
         return number;
@@ -19,12 +26,12 @@ public class Task {
         this.number = number;
     }
 
-    public int getScore() {
-        return score;
+    public int getDifficulty() {
+        return difficulty;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
     }
 
     public String getUrl() {
