@@ -1,7 +1,6 @@
 package Core.Builders;
 
 import Core.Task;
-import Core.TaskCase;
 
 import java.util.ArrayList;
 
@@ -14,11 +13,6 @@ public class TaskBuilder {
         return null;
     }
 
-    public static TaskBuilder topic(String topic){
-        task.setTopic(topic);
-        return null;
-    }
-
     public static TaskBuilder score(int score){
         task.setScore(score);
         return null;
@@ -26,16 +20,6 @@ public class TaskBuilder {
 
     public static TaskBuilder url(String url){
         task.setUrl(url);
-        return null;
-    }
-
-    public static TaskBuilder description(String description){
-        task.setDescription(description);
-        return null;
-    }
-
-    public static TaskBuilder taskCases(ArrayList<TaskCase> cases){
-        task.setTaskCases(cases);
         return null;
     }
 

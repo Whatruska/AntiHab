@@ -1,4 +1,4 @@
-package DataBase;
+package DataBase.Managers;
 
 public class UserManager {
 }
