@@ -3,7 +3,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import GUI.Controller;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -33,12 +32,12 @@ public class LoginController extends Controller {
     void initialize() {
         loginButton.setOnAction(event -> {
             loginButton.getScene().getWindow().hide();
-            showNewFXML("Main");
+            showNewFXMLByName("Main");
         });
 
         registerButton.setOnAction(event -> {
             registerButton.getScene().getWindow().hide();
-            showNewFXML("Register");
+            showNewFXMLByName("Register");
         });
     }
 }

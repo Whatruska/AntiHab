@@ -47,11 +47,16 @@ public class MainController extends Controller {
 
         logoutButton.setOnAction(event -> {
             logoutButton.getScene().getWindow().hide();
-            showNewFXML("Login");
+            showNewFXMLByName("Login");
         });
 
         comboBox.setOnAction(event -> {
 
+        });
+
+        settingButton.setOnAction(event -> {
+            logoutButton.getScene().getWindow().hide();
+            showNewFXMLByName("Settings");
         });
     }
 }

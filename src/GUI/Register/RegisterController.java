@@ -39,7 +39,7 @@ public class RegisterController extends Controller {
     void initialize() {
          registerButton.setOnAction(event -> {
              registerButton.getScene().getWindow().hide();
-             showNewFXML("Main");
+             showNewFXMLByName("Main");
          });
     }
 }

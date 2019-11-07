@@ -7,7 +7,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Loader extends Application {
-    public static Stage mainScene = new Stage();
+    private static Stage mainScene = new Stage();
+
+    public static Stage getMainScene() {
+        return mainScene;
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
