@@ -4,8 +4,14 @@
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/Core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/Managers/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Managers/UserManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Main/MainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main/MainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,46 +84,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Main/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="63" column="36" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="64" column="48" lean-forward="true" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1335#1336#0" expanded="true" />
-                <element signature="e#1361#1362#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -153,13 +120,9 @@
         <option value="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/SettingsForm.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/AuthorizedController.java" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangePasswordForm.fxml" />
-        <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangePasswordForm.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangePasswordForm.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/SettingsController.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.java" />
         <option value="$PROJECT_DIR$/src/GUI/css/style.css" />
         <option value="$PROJECT_DIR$/src/GUI/GetNewTask/ChangeLoginForm.fxml" />
         <option value="$PROJECT_DIR$/src/DataBase/Executor.java" />
@@ -173,12 +136,16 @@
         <option value="$PROJECT_DIR$/src/Core/Builders/TaskBuilder.java" />
         <option value="$PROJECT_DIR$/src/GUI/AuthorizedController.java" />
         <option value="$PROJECT_DIR$/src/GUI/Login/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/DataBase/Managers/UserManager.java" />
         <option value="$PROJECT_DIR$/src/GUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/Core/User.java" />
         <option value="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" />
         <option value="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java" />
         <option value="$PROJECT_DIR$/src/GUI/Main/MainController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java" />
+        <option value="$PROJECT_DIR$/src/DataBase/Managers/UserManager.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java" />
       </list>
     </option>
   </component>
@@ -223,6 +190,13 @@
               <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
               <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
+              <item name="Managers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -230,7 +204,7 @@
               <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="Settings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,25 +360,25 @@
       <workItem from="1573054562783" duration="17270000" />
       <workItem from="1573101086353" duration="8635000" />
       <workItem from="1573132000193" duration="9970000" />
-      <workItem from="1573154750413" duration="3988000" />
+      <workItem from="1573154750413" duration="5220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41165000" />
+    <option name="totallyTimeSpent" value="42397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1410" height="876" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2638889" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2638889" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.32967836" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32780612" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32780612" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39923468" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -417,7 +391,7 @@
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32908162" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Terminal" order="16" weight="0.32866243" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="16" visible="true" weight="0.32780612" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -536,16 +510,6 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOForm.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
@@ -564,40 +528,10 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="36" column="42" lean-forward="true" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -671,16 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Login/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="53" column="109" selection-start-line="53" selection-start-column="109" selection-end-line="53" selection-end-column="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataBase/database.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -719,16 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/UserManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="49" column="81" selection-start-line="49" selection-start-column="81" selection-end-line="49" selection-end-column="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Builders/TaskBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -736,9 +650,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="2569" selection-start-line="2569" selection-end-line="2569" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Main/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="69" column="52" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="-145">
           <caret line="64" column="48" lean-forward="true" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -750,7 +681,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
+        <state relative-caret-position="546">
           <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -758,10 +689,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Main/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/Login/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="63" column="36" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="36" />
+        <state relative-caret-position="369">
+          <caret line="53" column="109" selection-start-line="53" selection-start-column="109" selection-end-line="53" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -41,12 +41,18 @@ public class ChangeDifficultyController extends AuthorizedController {
         topLimitSpinner.setValueFactory(topFactory);
 
         changeDifficultyButton.setOnAction(event -> {
-            client.setBottomLimit(bottomLimitSpinner.getValue());
-            client.setTopLimit(topLimitSpinner.getValue());
-            UserManager.updateUser(client);
-            changeDifficultyButton.getScene().getWindow().hide();
-            showNewFXMLByName("Settings");
+            if (validate()) {
+                client.setBottomLimit(bottomLimitSpinner.getValue());
+                client.setTopLimit(topLimitSpinner.getValue());
+                UserManager.updateUser(client);
+                changeDifficultyButton.getScene().getWindow().hide();
+                showNewFXMLByName("Settings");
+            }
         });
+    }
+
+    private boolean validate(){
+        return topLimitSpinner.getValue() >= bottomLimitSpinner.getValue();
     }
 }
 

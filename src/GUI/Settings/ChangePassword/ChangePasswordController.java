@@ -35,11 +35,20 @@ public class ChangePasswordController extends AuthorizedController {
     void initialize() {
         super.init();
         changePasswordButton.setOnAction(event -> {
-            String crypt = Encryptor.encrypt(confirmPasswordField.getText());
-            UserManager.updatePassword(client, crypt);
-            changePasswordButton.getScene().getWindow().hide();
-            showNewFXMLByName("Settings");
+            if (validate()) {
+                String crypt = Encryptor.encrypt(confirmPasswordField.getText());
+                UserManager.updatePassword(client, crypt);
+                changePasswordButton.getScene().getWindow().hide();
+                showNewFXMLByName("Settings");
+            }
         });
+    }
+
+    private boolean validate(){
+        String oldPass = oldPasswordField.getText();
+        String encrypted = Encryptor.encrypt(oldPass);
+        String passFromDB = UserManager.getPasswordFromDBByLogin(client.getLogin());
+        return encrypted.equalsIgnoreCase(passFromDB) && newPasswordField.getText().length() > 7 && newPasswordField.getText().equalsIgnoreCase(confirmPasswordField.getText());
     }
 }
 

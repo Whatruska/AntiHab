@@ -34,12 +34,18 @@ public class ChangeFIOController extends AuthorizedController {
     void initialize() {
         super.init();
         changePasswordButton.setOnAction(event -> {
-            client.setSurname(surnameField.getText());
-            client.setName(nameField.getText());
-            UserManager.updateUser(client);
-            changePasswordButton.getScene().getWindow().hide();
-            showNewFXMLByName("Settings");
+            if (validate()) {
+                client.setSurname(surnameField.getText());
+                client.setName(nameField.getText());
+                UserManager.updateUser(client);
+                changePasswordButton.getScene().getWindow().hide();
+                showNewFXMLByName("Settings");
+            }
         });
+    }
+
+    private boolean validate(){
+        return surnameField.getText().length() > 0 && nameField.getText().length() > 0;
     }
 }
 

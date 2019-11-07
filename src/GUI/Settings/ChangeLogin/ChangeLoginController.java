@@ -30,11 +30,17 @@ public class ChangeLoginController extends AuthorizedController {
     void initialize() {
         super.init();
         changeLoginButton.setOnAction(event -> {
-            client.setLogin(changeLoginField.getText());
-            UserManager.updateUser(client);
-            changeLoginButton.getScene().getWindow().hide();
-            showNewFXMLByName("Settings");
+            if (validate()) {
+                client.setLogin(changeLoginField.getText());
+                UserManager.updateUser(client);
+                changeLoginButton.getScene().getWindow().hide();
+                showNewFXMLByName("Settings");
+            }
         });
+    }
+
+    private boolean validate(){
+        return changeLoginField.getText().length() > 0 && !UserManager.getAllLogins().contains(changeLoginField.getText());
     }
 }
 
