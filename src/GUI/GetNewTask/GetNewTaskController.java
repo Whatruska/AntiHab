@@ -3,6 +3,8 @@ package GUI.GetNewTask;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import Core.Task;
+import DataBase.Managers.TaskManager;
 import GUI.AuthorizedController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,6 +13,8 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 public class GetNewTaskController extends AuthorizedController {
+
+    private Task task = TaskManager.getRandomTask(client);
 
     @FXML
     private ResourceBundle resources;
@@ -47,9 +51,16 @@ public class GetNewTaskController extends AuthorizedController {
         });
 
         getThisTaskButton.setOnAction(event -> {
+            TaskManager.assignTaskOnUser(client, task);
             getThisTaskButton.getScene().getWindow().hide();
             showNewFXMLByName("Main");
         });
+
+        randomNewTaskButton.setOnAction(event -> {
+            task = TaskManager.getRandomTask(client);
+            engine.load(task.getUrl());
+        });
+
     }
 }
 

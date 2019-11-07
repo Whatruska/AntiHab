@@ -3,6 +3,7 @@ package GUI.Settings.ChangeFIO;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import DataBase.Managers.UserManager;
 import GUI.AuthorizedController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,6 +34,9 @@ public class ChangeFIOController extends AuthorizedController {
     void initialize() {
         super.init();
         changePasswordButton.setOnAction(event -> {
+            client.setSurname(surnameField.getText());
+            client.setName(nameField.getText());
+            UserManager.updateUser(client);
             changePasswordButton.getScene().getWindow().hide();
             showNewFXMLByName("Settings");
         });

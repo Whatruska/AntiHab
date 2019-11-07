@@ -3,6 +3,9 @@ package GUI.Settings.ChangeDifficulty;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import Core.User;
+import DataBase.Managers.TaskManager;
+import DataBase.Managers.UserManager;
 import GUI.AuthorizedController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -36,7 +39,11 @@ public class ChangeDifficultyController extends AuthorizedController {
         SpinnerValueFactory<Integer> topFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,100,10);
         bottomLimitSpinner.setValueFactory(bottomFactory);
         topLimitSpinner.setValueFactory(topFactory);
+
         changeDifficultyButton.setOnAction(event -> {
+            client.setBottomLimit(bottomLimitSpinner.getValue());
+            client.setTopLimit(topLimitSpinner.getValue());
+            UserManager.updateUser(client);
             changeDifficultyButton.getScene().getWindow().hide();
             showNewFXMLByName("Settings");
         });

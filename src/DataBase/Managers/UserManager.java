@@ -57,6 +57,14 @@ public class UserManager extends Manager {
         return pass;
     }
 
+    public static void updatePassword(User user, String password){
+        try {
+            Executor.execute("UPDATE `USERS` SET PASSWORD=\"" + password + "\"");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void registerNewUser(User user, String password){
 
         String sql = REGISTER_SQL;

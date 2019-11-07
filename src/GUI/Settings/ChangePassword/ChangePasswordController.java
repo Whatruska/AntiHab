@@ -3,6 +3,8 @@ package GUI.Settings.ChangePassword;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import DataBase.Encryptor;
+import DataBase.Managers.UserManager;
 import GUI.AuthorizedController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,6 +35,8 @@ public class ChangePasswordController extends AuthorizedController {
     void initialize() {
         super.init();
         changePasswordButton.setOnAction(event -> {
+            String crypt = Encryptor.encrypt(confirmPasswordField.getText());
+            UserManager.updatePassword(client, crypt);
             changePasswordButton.getScene().getWindow().hide();
             showNewFXMLByName("Settings");
         });

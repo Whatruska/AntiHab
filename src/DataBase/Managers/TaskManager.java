@@ -35,6 +35,10 @@ public class TaskManager extends Manager {
         return new Task();
     }
 
+    public static Task getRandomTask(User user){
+        return null;
+    }
+
     public static void registerNewTask(Task task){
         String sql = REGISTER_SQL;
 
@@ -80,6 +84,17 @@ public class TaskManager extends Manager {
         } else {
             return -1;
         }
+    }
+
+    public static int reassignTaskFromUser(User user, Task task){
+        if (task.isOcupied()){
+            user.removeTask(task);
+            task.setOcupied(false);
+            UserManager.updateUser(user);
+            updateTask(task);
+            return 0;
+        }
+        return -1;
     }
 
     private static Task buildTaskFromSet(ResultSet set) throws SQLException {

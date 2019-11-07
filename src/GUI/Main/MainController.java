@@ -1,16 +1,22 @@
 package GUI.Main;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import GUI.Controller;
+import Core.Task;
+import DataBase.Managers.TaskManager;
+import GUI.AuthorizedController;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
-public class MainController extends Controller {
+public class MainController extends AuthorizedController {
 
     @FXML
     private ResourceBundle resources;
@@ -22,7 +28,7 @@ public class MainController extends Controller {
     private Button logoutButton;
 
     @FXML
-    private ComboBox<?> comboBox;
+    private ComboBox<Task> comboBox;
 
     @FXML
     private WebView webView;
@@ -37,7 +43,17 @@ public class MainController extends Controller {
     private Button settingButton;
 
     @FXML
+    private Text helloText;
+
+    @FXML
     void initialize() {
+
+        ObservableList<Task> tasks = convertToObservableList(client.getTasks());
+
+        comboBox.setItems(tasks);
+
+        helloText.setText("Привет, " + client.getName());
+
         WebEngine engine = webView.getEngine();
         engine.load("http://acmp.ru/index.asp?main=task&id_task=1");
 
@@ -51,7 +67,7 @@ public class MainController extends Controller {
         });
 
         comboBox.setOnAction(event -> {
-
+            engine.load(comboBox.getValue().getUrl());
         });
 
         settingButton.setOnAction(event -> {
@@ -63,6 +79,15 @@ public class MainController extends Controller {
             getNewTaskButton.getScene().getWindow().hide();
             showNewFXMLByName("GetNewTask");
         });
+
+        rejectTaskButton.setOnAction(event -> {
+            Task currentTask = comboBox.getValue();
+            TaskManager.reassignTaskFromUser(client, currentTask);
+        });
+    }
+
+    private ObservableList<Task> convertToObservableList(ArrayList<Task> tasks){
+         return FXCollections.observableList(tasks);
     }
 }
 

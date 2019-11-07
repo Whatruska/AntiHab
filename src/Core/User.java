@@ -74,6 +74,10 @@ public class User {
         tasks.add(task);
     }
 
+    public void removeTask(Task task){
+        tasks.remove(task);
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();

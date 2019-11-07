@@ -3,6 +3,7 @@ package GUI.Settings.ChangeLogin;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import DataBase.Managers.UserManager;
 import GUI.AuthorizedController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,6 +30,8 @@ public class ChangeLoginController extends AuthorizedController {
     void initialize() {
         super.init();
         changeLoginButton.setOnAction(event -> {
+            client.setLogin(changeLoginField.getText());
+            UserManager.updateUser(client);
             changeLoginButton.getScene().getWindow().hide();
             showNewFXMLByName("Settings");
         });
