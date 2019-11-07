@@ -2,6 +2,8 @@ package GUI.Login;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import Core.User;
+import DataBase.Managers.UserManager;
 import GUI.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

@@ -1,6 +1,7 @@
 package DataBase;
 
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -22,7 +23,8 @@ public class Connector {
         Connection connection = null;
 
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            Driver driver = (Driver) Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            DriverManager.registerDriver(driver);
             connection = DriverManager.getConnection(
                     url + table + "?serverTimezone=UTC",
                     login,

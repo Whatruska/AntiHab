@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="org.openjfx:javafx-base:11" level="project" />
     <orderEntry type="library" exported="" name="org.openjfx:javafx-fxml:14-ea+1" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:8.0.18" level="project" />
   </component>
 </module>

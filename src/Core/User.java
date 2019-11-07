@@ -73,4 +73,25 @@ public class User {
     public void addTask(Task task){
         tasks.add(task);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Login : " + this.login + "\n");
+        builder.append("Name : " + this.name + "\n");
+        builder.append("Surname : " + this.surname + "\n");
+        builder.append("Limits : [" + this.bottomLimit + " ; " + this.topLimit + "]\n");
+        builder.append("Tasks : ");
+        if (tasks.size() > 0){
+            for (Task task : this.tasks){
+                builder.append(task.getNumber() + " ");
+            }
+        } else {
+            builder.append("-");
+        }
+        if (this.isAdmin){
+            builder.append("\n----ADMIN----\n");
+        }
+        return builder.toString();
+    }
 }
