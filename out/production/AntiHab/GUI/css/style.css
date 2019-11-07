@@ -16,6 +16,15 @@
     -fx-text-fill: #F0F0F0;
 }
 
+.btn-out{
+    -fx-background-color: #7955A3;
+}
+
+.btn-out:hover{
+    -fx-background-color: #F0F0F0 !important;
+    -fx-text-fill: #080A03;
+}
+
 .text-field{
     -fx-padding: 5px 10px;
     -fx-background-color: #F0F0F0;
@@ -28,4 +37,16 @@
 
 .btn:hover{
     -fx-background-color: #7955A3;
+}
+
+.btn-get-task:hover{
+    -fx-background-color: #30a53e;
+}
+
+.btn-reject-task:hover{
+    -fx-background-color: #b32620;
+}
+
+.btn-setting:hover{
+    -fx-background-color: #888888;
 }

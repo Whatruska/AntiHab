@@ -1,20 +1,22 @@
 package GUI;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Loader extends Application {
+    public static Stage mainScene = new Stage();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        mainScene = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("Login/LoginForm.fxml"));
         root.getStylesheets().add(getClass().getResource("css/style.css").toExternalForm());
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 600));
-        primaryStage.setResizable(false);
-        primaryStage.show();
+        mainScene.setScene(new Scene(root, 599, 549));
+        mainScene.setResizable(false);
+        mainScene.show();
     }
 
 

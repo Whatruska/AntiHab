@@ -8,17 +8,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Controller {
-    protected final void showNewFXML(String path){
+    protected final void showNewFXML(String name){
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource(path));
+        loader.setLocation(getClass().getResource("/GUI/" + name + "/" + name + "Form.fxml"));
         try {
             loader.load();
         } catch (IOException e) {
             e.printStackTrace();
         }
         Parent root = loader.getRoot();
-        Stage stage = new Stage();
+        Stage stage = Loader.mainScene;
         stage.setScene(new Scene(root));
-        stage.showAndWait();
+        stage.show();
     }
 }
