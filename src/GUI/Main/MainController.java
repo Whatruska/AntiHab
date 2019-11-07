@@ -58,6 +58,11 @@ public class MainController extends Controller {
             logoutButton.getScene().getWindow().hide();
             showNewFXMLByName("Settings");
         });
+
+        getNewTaskButton.setOnAction(event -> {
+            getNewTaskButton.getScene().getWindow().hide();
+            showNewFXMLByName("GetNewTask");
+        });
     }
 }
 

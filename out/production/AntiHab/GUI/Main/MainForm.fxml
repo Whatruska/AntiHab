@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.web.WebView?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Main.MainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1250.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Main.MainController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="122.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="122.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1250.0" />
       <ImageView fitHeight="113.0" fitWidth="107.0" layoutX="36.0" layoutY="4.0">
          <image>
             <Image url="@../../../res/iconfinder_java_401285.png" />
@@ -34,17 +34,23 @@
          </styleClass>
       </Button>
       <ComboBox fx:id="comboBox" layoutX="216.0" layoutY="136.0" prefWidth="150.0" />
-      <WebView fx:id="webView" layoutX="20.0" layoutY="175.0" prefHeight="557.0" prefWidth="1148.0" />
-      <Button fx:id="getNewTaskButton" layoutX="35.0" layoutY="746.0" mnemonicParsing="false" text="Взять новое задание">
+      <WebView fx:id="webView" layoutX="20.0" layoutY="175.0" prefHeight="557.0" prefWidth="1200.0" />
+      <Button fx:id="getNewTaskButton" layoutX="35.0" layoutY="746.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="223.0" text="Взять новое задание">
          <styleClass>
             <String fx:value="btn" />
             <String fx:value="btn-get-task" />
-         </styleClass></Button>
-      <Button fx:id="rejectTaskButton" layoutX="268.0" layoutY="746.0" mnemonicParsing="false" text="Откзаться от этого задания">
+         </styleClass>
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button fx:id="rejectTaskButton" layoutX="325.0" layoutY="746.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="281.0" text="Откзаться от этого задания">
          <styleClass>
             <String fx:value="btn" />
             <String fx:value="btn-reject-task" />
-         </styleClass></Button>
+         </styleClass>
+         <font>
+            <Font size="18.0" />
+         </font></Button>
       <Button fx:id="settingButton" layoutX="1020.0" layoutY="132.0" mnemonicParsing="false" text="Настройки">
          <font>
             <Font size="18.0" />
