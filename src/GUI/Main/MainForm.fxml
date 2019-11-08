@@ -65,7 +65,7 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Text fx:id="helloText" layoutX="689.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="helloText" layoutX="537.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font size="25.0" />
          </font>
@@ -76,10 +76,5 @@
          </font>
       </Text>
       <Hyperlink fx:id="urlRef" layoutX="890.0" layoutY="751.0" prefHeight="25.0" prefWidth="315.0" />
-      <Button fx:id="passTaskButton" layoutX="458.0" layoutY="133.0" mnemonicParsing="false" styleClass="btn" text="Сдать задачу">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
    </children>
 </Pane>

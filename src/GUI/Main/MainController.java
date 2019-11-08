@@ -8,7 +8,7 @@ import Core.Task;
 import DataBase.Managers.TaskManager;
 import GUI.AuthorizedController;
 import GUI.Loader;
-import javafx.application.Application;
+import HTMLParser.HTMLManager;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.text.Text;
+import javafx.scene.web.HTMLEditor;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
@@ -53,9 +54,6 @@ public class MainController extends AuthorizedController {
     private Hyperlink urlRef;
 
     @FXML
-    private Button passTaskButton;
-
-    @FXML
     void initialize() {
         WebEngine engine = webView.getEngine();
 
@@ -63,13 +61,18 @@ public class MainController extends AuthorizedController {
 
         comboBox.setItems(tasks);
 
-        passTaskButton.setDisable(true);
         rejectTaskButton.setDisable(true);
 
         helloText.setText("Привет, " + getClient().getName());
 
         webView.setOnMouseClicked(event -> {
-            engine.load(comboBox.getValue().getUrl());
+            Task task = comboBox.getValue();
+            if (task == null){
+                task = new Task();
+                task.setUrl(HTMLManager.getPathToErr());
+            }
+
+            engine.load(task.getUrl());
         });
 
         logoutButton.setOnAction(event -> {
@@ -99,12 +102,6 @@ public class MainController extends AuthorizedController {
             TaskManager.reassignTaskFromUser(getClient(), currentTask);
             reload();
         });
-
-        passTaskButton.setOnAction(event -> {
-            getNewTaskButton.getScene().getWindow().hide();
-            setTargetTask(comboBox.getValue());
-            showNewFXMLByName("PassTask");
-        });
     }
 
     private ObservableList<Task> convertToObservableList(ArrayList<Task> tasks){
@@ -113,9 +110,13 @@ public class MainController extends AuthorizedController {
 
     private void reload(){
         Task task = comboBox.getValue();
+        if (task == null){
+            task = new Task();
+            task.setUrl("");
+        }
         urlRef.setText(task.getUrl());
         WebEngine engine = webView.getEngine();
-        engine.load(task.getUrl());
+        engine.load("file:///error.html");
         urlRef.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -123,10 +124,8 @@ public class MainController extends AuthorizedController {
                 Loader.getInstance().getHostServices().showDocument(urlRef.getText());
             }
         });
-        if (comboBox.getValue().getUrl() != null){
-            rejectTaskButton.setDisable(false);
-            passTaskButton.setDisable(false);
-        }
+
+        rejectTaskButton.setDisable(task.getUrl().equalsIgnoreCase(""));
     }
 }
 
