@@ -11,6 +11,11 @@ public class TaskBuilder {
         return null;
     }
 
+    public static TaskBuilder name(String name){
+        task.setName(name);
+        return null;
+    }
+
     public static TaskBuilder difficulty(int score){
         task.setDifficulty(score);
         return null;

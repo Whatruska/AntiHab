@@ -7,8 +7,17 @@ public class Task {
     private String url;
     private boolean isOcupied;
     private int ocupiedBy;
+    private String name;
 
     public Task() {}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public int getOcupiedBy() {
         return ocupiedBy;
@@ -50,4 +59,8 @@ public class Task {
         isOcupied = ocupied;
     }
 
+    @Override
+    public String toString() {
+        return getNumber() + " - " + getName();
+    }
 }

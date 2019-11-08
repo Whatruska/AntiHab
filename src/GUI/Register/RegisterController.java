@@ -58,7 +58,7 @@ public class RegisterController extends Controller {
                  User user = UserManager.getUserByLogin(loginField.getText());
                  System.out.println(user);
                  registerButton.getScene().getWindow().hide();
-                 showNewFXMLByName("Main");
+                 showNewFXMLByName("Login");
              }
          });
     }

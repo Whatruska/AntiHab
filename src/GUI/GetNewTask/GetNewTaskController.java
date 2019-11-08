@@ -43,24 +43,41 @@ public class GetNewTaskController extends AuthorizedController {
     @FXML
     void initialize() {
         super.init();
+
         WebEngine engine = webView.getEngine();
-        engine.load("http://acmp.ru/index.asp?main=task&id_task=1");
 
-        webView.setOnMouseClicked(event -> {
-            engine.load("http://acmp.ru/index.asp?main=task&id_task=1");
-        });
+        if (task.getUrl() == null){
+            showError();
+        } else {
+            reloadPage();
 
-        getThisTaskButton.setOnAction(event -> {
-            TaskManager.assignTaskOnUser(client, task);
-            getThisTaskButton.getScene().getWindow().hide();
-            showNewFXMLByName("Main");
-        });
+            webView.setOnMouseClicked(event -> {
+                engine.load(task.getUrl());
+            });
 
-        randomNewTaskButton.setOnAction(event -> {
-            task = TaskManager.getRandomTask(client);
-            engine.load(task.getUrl());
-        });
+            getThisTaskButton.setOnAction(event -> {
+                TaskManager.assignTaskOnUser(client, task);
+                getThisTaskButton.getScene().getWindow().hide();
+                showNewFXMLByName("Main");
+            });
 
+            randomNewTaskButton.setOnAction(event -> {
+                task = TaskManager.getRandomTask(client);
+                reloadPage();
+            });
+        }
+    }
+
+    private void showError(){
+        System.out.println("ERROR");
+    }
+
+    private void reloadPage(){
+        WebEngine engine = webView.getEngine();
+        engine.load(task.getUrl());
+
+        taskNumField.setText(task.toString());
+        difficultyField.setText(Integer.toString(task.getDifficulty()));
     }
 }
 

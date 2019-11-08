@@ -13,7 +13,7 @@ public class UserManager extends Manager {
 
     private static final String SELECT_SQL = "SELECT * FROM `USERS`";
     private static final String REGISTER_SQL = "INSERT INTO `USERS` (`LOGIN`, `PASSWORD`, `SURNAME`, `NAME`, `IS_ADMIN`, `BOTTOM_LIMIT`, `TOP_LIMIT`) VALUES ('?', '?', '?', '?', '?', '?', '?')";
-    private static final String UPDATE_SQL = "UPDATE `USERS` SET LOGIN = `?`, SURNAME = `?`, NAME = `?`, IS_ADMIN = `?`, BOTTOM_LIMIT = `?`, TOP_LIMIT = `?`, TASKS = `?`";
+    private static final String UPDATE_SQL = "UPDATE `USERS` SET LOGIN = '?', SURNAME = '?', NAME = '?', IS_ADMIN = '?', BOTTOM_LIMIT = '?', TOP_LIMIT = '?', TASKS = '?'";
     private static final String DELETE_SQL = "DELETE FROM `USERS` WHERE";
 
     public static User getUserByLogin(String login){
@@ -109,10 +109,24 @@ public class UserManager extends Manager {
 
     }
 
+    public static int getIDByLogin(String login){
+        int id = 0;
+        String sql = "SELECT `ID` FROM `USERS` WHERE LOGIN = '" + login + "'";
+        try {
+            ResultSet set = Executor.executeSelect(sql);
+            while (set.next()){
+                id = set.getInt("ID");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return id;
+    }
+
     private static User formUserFromSet(ResultSet set) throws SQLException {
         String login = set.getString("LOGIN");
         String name = set.getString("NAME");
-        String surname = set.getString("NAME");
+        String surname = set.getString("SURNAME");
         Boolean isAdmin = set.getBoolean("IS_ADMIN");
         Integer bottomLimit = set.getInt("BOTTOM_LIMIT");
         Integer topLimit = set.getInt("TOP_LIMIT");
