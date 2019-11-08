@@ -53,18 +53,23 @@ public class MainController extends AuthorizedController {
     private Hyperlink urlRef;
 
     @FXML
-    void initialize() {
+    private Button passTaskButton;
 
-        ObservableList<Task> tasks = convertToObservableList(client.getTasks());
+    @FXML
+    void initialize() {
+        WebEngine engine = webView.getEngine();
+
+        ObservableList<Task> tasks = convertToObservableList(getClient().getTasks());
 
         comboBox.setItems(tasks);
 
-        helloText.setText("Привет, " + client.getName());
+        passTaskButton.setDisable(true);
+        rejectTaskButton.setDisable(true);
 
-        WebEngine engine = webView.getEngine();
+        helloText.setText("Привет, " + getClient().getName());
 
         webView.setOnMouseClicked(event -> {
-            engine.load("http://acmp.ru/index.asp?main=task&id_task=1");
+            engine.load(comboBox.getValue().getUrl());
         });
 
         logoutButton.setOnAction(event -> {
@@ -73,15 +78,7 @@ public class MainController extends AuthorizedController {
         });
 
         comboBox.setOnAction(event -> {
-            engine.load(comboBox.getValue().getUrl());
-            urlRef.setText(comboBox.getValue().getUrl());
-            urlRef.setOnAction(new EventHandler<ActionEvent>() {
-
-                @Override
-                public void handle(ActionEvent event) {
-                    Loader.getInstance().getHostServices().showDocument(urlRef.getText());
-                }
-            });
+            reload();
         });
 
         settingButton.setOnAction(event -> {
@@ -95,13 +92,41 @@ public class MainController extends AuthorizedController {
         });
 
         rejectTaskButton.setOnAction(event -> {
+            ObservableList<Task> taskList = comboBox.getItems();
             Task currentTask = comboBox.getValue();
-            TaskManager.reassignTaskFromUser(client, currentTask);
+            taskList.remove(currentTask);
+            comboBox.setItems(taskList);
+            TaskManager.reassignTaskFromUser(getClient(), currentTask);
+            reload();
+        });
+
+        passTaskButton.setOnAction(event -> {
+            getNewTaskButton.getScene().getWindow().hide();
+            setTargetTask(comboBox.getValue());
+            showNewFXMLByName("PassTask");
         });
     }
 
     private ObservableList<Task> convertToObservableList(ArrayList<Task> tasks){
-         return FXCollections.observableList(tasks);
+        return FXCollections.observableList(tasks);
+    }
+
+    private void reload(){
+        Task task = comboBox.getValue();
+        urlRef.setText(task.getUrl());
+        WebEngine engine = webView.getEngine();
+        engine.load(task.getUrl());
+        urlRef.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                Loader.getInstance().getHostServices().showDocument(urlRef.getText());
+            }
+        });
+        if (comboBox.getValue().getUrl() != null){
+            rejectTaskButton.setDisable(false);
+            passTaskButton.setDisable(false);
+        }
     }
 }
 

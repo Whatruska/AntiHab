@@ -37,7 +37,7 @@ public class ChangePasswordController extends AuthorizedController {
         changePasswordButton.setOnAction(event -> {
             if (validate()) {
                 String crypt = Encryptor.encrypt(confirmPasswordField.getText());
-                UserManager.updatePassword(client, crypt);
+                UserManager.updatePassword(getClient(), crypt);
                 changePasswordButton.getScene().getWindow().hide();
                 showNewFXMLByName("Settings");
             }
@@ -47,7 +47,7 @@ public class ChangePasswordController extends AuthorizedController {
     private boolean validate(){
         String oldPass = oldPasswordField.getText();
         String encrypted = Encryptor.encrypt(oldPass);
-        String passFromDB = UserManager.getPasswordFromDBByLogin(client.getLogin());
+        String passFromDB = UserManager.getPasswordFromDBByLogin(getClient().getLogin());
         return encrypted.equalsIgnoreCase(passFromDB) && newPasswordField.getText().length() > 7 && newPasswordField.getText().equalsIgnoreCase(confirmPasswordField.getText());
     }
 }

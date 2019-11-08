@@ -42,9 +42,9 @@ public class ChangeDifficultyController extends AuthorizedController {
 
         changeDifficultyButton.setOnAction(event -> {
             if (validate()) {
-                client.setBottomLimit(bottomLimitSpinner.getValue());
-                client.setTopLimit(topLimitSpinner.getValue());
-                UserManager.updateUser(client);
+                getClient().setBottomLimit(bottomLimitSpinner.getValue());
+                getClient().setTopLimit(topLimitSpinner.getValue());
+                UserManager.updateUser(getClient());
                 changeDifficultyButton.getScene().getWindow().hide();
                 showNewFXMLByName("Settings");
             }

@@ -14,7 +14,7 @@ import javafx.scene.web.WebView;
 
 public class GetNewTaskController extends AuthorizedController {
 
-    private Task task = TaskManager.getRandomTask(client);
+    private Task task = TaskManager.getRandomTask(getClient());
 
     @FXML
     private ResourceBundle resources;
@@ -56,13 +56,13 @@ public class GetNewTaskController extends AuthorizedController {
             });
 
             getThisTaskButton.setOnAction(event -> {
-                TaskManager.assignTaskOnUser(client, task);
+                TaskManager.assignTaskOnUser(getClient(), task);
                 getThisTaskButton.getScene().getWindow().hide();
                 showNewFXMLByName("Main");
             });
 
             randomNewTaskButton.setOnAction(event -> {
-                task = TaskManager.getRandomTask(client);
+                task = TaskManager.getRandomTask(getClient());
                 reloadPage();
             });
         }
@@ -73,7 +73,7 @@ public class GetNewTaskController extends AuthorizedController {
         getThisTaskButton.setDisable(true);
         randomNewTaskButton.setDisable(true);
         WebEngine engine = webView.getEngine();
-        engine.load("error.html");
+        engine.load("file:///error.html");
     }
 
     private void reloadPage(){

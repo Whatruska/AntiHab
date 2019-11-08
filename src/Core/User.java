@@ -63,6 +63,9 @@ public class User {
     }
 
     public ArrayList<Task> getTasks() {
+        if (tasks.size() == 1 && tasks.get(0).getUrl() == null){
+            return new ArrayList<>();
+        }
         return tasks;
     }
 

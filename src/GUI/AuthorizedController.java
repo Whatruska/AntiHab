@@ -1,12 +1,14 @@
 package GUI;
 
+import Core.Task;
 import Core.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class AuthorizedController extends Controller {
 
-    protected static User client;
+    private static User client;
+    private static Task targetTask;
 
     public static User getClient() {
         return client;
@@ -14,6 +16,14 @@ public class AuthorizedController extends Controller {
 
     public static void setClient(User client) {
         AuthorizedController.client = client;
+    }
+
+    public static Task getTargetTask() {
+        return targetTask;
+    }
+
+    public static void setTargetTask(Task targetTask) {
+        AuthorizedController.targetTask = targetTask;
     }
 
     @FXML
