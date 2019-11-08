@@ -70,6 +70,10 @@ public class GetNewTaskController extends AuthorizedController {
 
     private void showError(){
         System.out.println("ERROR");
+        getThisTaskButton.setDisable(true);
+        randomNewTaskButton.setDisable(true);
+        WebEngine engine = webView.getEngine();
+        engine.load("error.html");
     }
 
     private void reloadPage(){

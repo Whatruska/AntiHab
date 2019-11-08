@@ -7,11 +7,15 @@ import java.util.ResourceBundle;
 import Core.Task;
 import DataBase.Managers.TaskManager;
 import GUI.AuthorizedController;
+import GUI.Loader;
+import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.event.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
@@ -46,6 +50,9 @@ public class MainController extends AuthorizedController {
     private Text helloText;
 
     @FXML
+    private Hyperlink urlRef;
+
+    @FXML
     void initialize() {
 
         ObservableList<Task> tasks = convertToObservableList(client.getTasks());
@@ -55,7 +62,6 @@ public class MainController extends AuthorizedController {
         helloText.setText("Привет, " + client.getName());
 
         WebEngine engine = webView.getEngine();
-        engine.load("http://acmp.ru/index.asp?main=task&id_task=1");
 
         webView.setOnMouseClicked(event -> {
             engine.load("http://acmp.ru/index.asp?main=task&id_task=1");
@@ -68,6 +74,14 @@ public class MainController extends AuthorizedController {
 
         comboBox.setOnAction(event -> {
             engine.load(comboBox.getValue().getUrl());
+            urlRef.setText(comboBox.getValue().getUrl());
+            urlRef.setOnAction(new EventHandler<ActionEvent>() {
+
+                @Override
+                public void handle(ActionEvent event) {
+                    Loader.getInstance().getHostServices().showDocument(urlRef.getText());
+                }
+            });
         });
 
         settingButton.setOnAction(event -> {
