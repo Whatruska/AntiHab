@@ -1,5 +1,6 @@
 package GUI.Login;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import Core.User;
@@ -34,28 +35,39 @@ public class LoginController extends Controller {
 
     @FXML
     void initialize() {
+
         loginButton.setOnAction(event -> {
+            setWindow(loginButton.getScene().getWindow());
             if (login()) {
-                loginButton.getScene().getWindow().hide();
+                hide();
                 showNewFXMLByName("Main");
             }
         });
 
         registerButton.setOnAction(event -> {
-            registerButton.getScene().getWindow().hide();
+            setWindow(loginButton.getScene().getWindow());
+            hide();
             showNewFXMLByName("Register");
         });
+
     }
 
     private boolean login(){
         String login = loginField.getText();
-        String password = UserManager.getPasswordFromDBByLogin(login);
-        String encryptedPassword = Encryptor.encrypt(passwordField.getText());
-        if (password != null && !password.equalsIgnoreCase("") && password.equalsIgnoreCase(encryptedPassword)){
-            User user = UserManager.getUserByLogin(login);
-            AuthorizedController.setClient(user);
-            return true;
+        String password = null;
+        try {
+            password = UserManager.getPasswordFromDBByLogin(login);
+            String encryptedPassword = Encryptor.encrypt(passwordField.getText());
+            if (password != null && !password.equalsIgnoreCase("") && password.equalsIgnoreCase(encryptedPassword)){
+                User user = UserManager.getUserByLogin(login);
+                AuthorizedController.setClient(user);
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            hide();
+            showError(e);
+            return false;
         }
-        return false;
     }
 }

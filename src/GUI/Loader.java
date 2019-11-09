@@ -1,9 +1,5 @@
 package GUI;
 
-import Core.Task;
-import Core.User;
-import DataBase.Managers.TaskManager;
-import DataBase.Managers.UserManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -29,11 +25,7 @@ public class Loader extends Application {
 
 
     public static void main(String[] args) {
-        //launch(args);
-        User user = UserManager.getUserByLogin("Whatruska");
-        System.out.println(user);
-        Task task = TaskManager.getTaskByNumber(1);
-        System.out.println(task);
+        launch(args);
     }
 
     public static Application getInstance(){

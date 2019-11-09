@@ -30,23 +30,28 @@ public class SettingsController extends AuthorizedController {
     @FXML
     void initialize() {
         super.init();
+
         changePasswordButton.setOnAction(event -> {
-            changePasswordButton.getScene().getWindow().hide();
+            setWindow(changeDifficultyButton.getScene().getWindow());
+            hide();
             showNewSettingsFXMLByName("ChangePassword");
         });
 
         changeLoginButton.setOnAction(event -> {
-            changeLoginButton.getScene().getWindow().hide();
+            setWindow(changeDifficultyButton.getScene().getWindow());
+            hide();
             showNewSettingsFXMLByName("ChangeLogin");
         });
 
         changeDifficultyButton.setOnAction(event -> {
-            changeDifficultyButton.getScene().getWindow().hide();
+            setWindow(changeDifficultyButton.getScene().getWindow());
+            hide();
             showNewSettingsFXMLByName("ChangeDifficulty");
         });
 
         changeFIOButton.setOnAction(event -> {
-            changeFIOButton.getScene().getWindow().hide();
+            setWindow(changeDifficultyButton.getScene().getWindow());
+            hide();
             showNewSettingsFXMLByName("ChangeFIO");
         });
     }

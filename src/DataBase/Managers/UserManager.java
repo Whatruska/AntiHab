@@ -16,56 +16,39 @@ public class UserManager extends Manager {
     private static final String UPDATE_SQL = "UPDATE `USERS` SET LOGIN = '?', SURNAME = '?', NAME = '?', IS_ADMIN = '?', BOTTOM_LIMIT = '?', TOP_LIMIT = '?', TASKS = '?'";
     private static final String DELETE_SQL = "DELETE FROM `USERS` WHERE";
 
-    public static User getUserByLogin(String login){
-        try {
-            ResultSet result = Executor.executeSelect(SELECT_SQL + "WHERE LOGIN= \"" + login + "\"");
-            if (result != null){
-                while (result.next()) {
-                    return formUserFromSet(result);
-                }
+    public static User getUserByLogin(String login) throws SQLException {
+        ResultSet result = Executor.executeSelect(SELECT_SQL + "WHERE LOGIN= \"" + login + "\"");
+        if (result != null){
+            while (result.next()) {
+                return formUserFromSet(result);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
-
         return new User();
     }
 
-    public static ArrayList<String> getAllLogins(){
+    public static ArrayList<String> getAllLogins() throws SQLException {
         ArrayList<String> result = new ArrayList<>();
-        try {
-            ResultSet set = Executor.executeSelect(SELECT_SQL);
-            while (set.next()){
-                result.add(set.getString("LOGIN"));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ResultSet set = Executor.executeSelect(SELECT_SQL);
+        while (set.next()){
+            result.add(set.getString("LOGIN"));
         }
         return result;
     }
 
-    public static String getPasswordFromDBByLogin(String login){
+    public static String getPasswordFromDBByLogin(String login) throws SQLException {
         String pass = "";
-        try {
-            ResultSet set = Executor.executeSelect("SELECT `PASSWORD` FROM `USERS` WHERE LOGIN = \"" + login + "\"");
-            while (set.next()){
-                pass = set.getString("PASSWORD");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ResultSet set = Executor.executeSelect("SELECT `PASSWORD` FROM `USERS` WHERE LOGIN = \"" + login + "\"");
+        while (set.next()){
+            pass = set.getString("PASSWORD");
         }
         return pass;
     }
 
-    public static void updatePassword(User user, String password){
-        try {
-            Executor.execute("UPDATE `USERS` SET PASSWORD=\"" + password + "\"");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public static void updatePassword(User user, String password) throws SQLException {
+        Executor.execute("UPDATE `USERS` SET PASSWORD=\"" + password + "\"");
     }
 
-    public static void registerNewUser(User user, String password){
+    public static void registerNewUser(User user, String password) throws SQLException {
 
         String sql = REGISTER_SQL;
 
@@ -79,14 +62,10 @@ public class UserManager extends Manager {
         sql = addParamToSql(sql, Integer.toString(user.getBottomLimit()));
         sql = addParamToSql(sql, Integer.toString(user.getTopLimit()));
 
-        try {
-            Executor.execute(sql);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        Executor.execute(sql);
     }
 
-    public static void updateUser(User user){
+    public static void updateUser(User user) throws SQLException {
         String sql = UPDATE_SQL;
 
         sql = addParamToSql(sql, user.getLogin());
@@ -100,25 +79,15 @@ public class UserManager extends Manager {
 
         sql = addParamToSql(sql, taskListToString(user.getTasks()));
 
-        try {
-            Executor.execute(sql);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
+        Executor.execute(sql);
     }
 
-    public static int getIDByLogin(String login){
+    public static int getIDByLogin(String login) throws SQLException {
         int id = 0;
         String sql = "SELECT `ID` FROM `USERS` WHERE LOGIN = '" + login + "'";
-        try {
-            ResultSet set = Executor.executeSelect(sql);
-            while (set.next()){
-                id = set.getInt("ID");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ResultSet set = Executor.executeSelect(sql);
+        while (set.next()){
+            id = set.getInt("ID");
         }
         return id;
     }

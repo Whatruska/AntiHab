@@ -1,6 +1,7 @@
 package GUI.Main;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -55,6 +56,7 @@ public class MainController extends AuthorizedController {
 
     @FXML
     void initialize() {
+
         WebEngine engine = webView.getEngine();
 
         ObservableList<Task> tasks = convertToObservableList(getClient().getTasks());
@@ -76,7 +78,8 @@ public class MainController extends AuthorizedController {
         });
 
         logoutButton.setOnAction(event -> {
-            logoutButton.getScene().getWindow().hide();
+            setWindow(webView.getScene().getWindow());
+            hide();
             showNewFXMLByName("Login");
         });
 
@@ -85,22 +88,30 @@ public class MainController extends AuthorizedController {
         });
 
         settingButton.setOnAction(event -> {
-            logoutButton.getScene().getWindow().hide();
+            setWindow(webView.getScene().getWindow());
+            hide();
             showNewFXMLByName("Settings");
         });
 
         getNewTaskButton.setOnAction(event -> {
-            getNewTaskButton.getScene().getWindow().hide();
+            setWindow(webView.getScene().getWindow());
+            hide();
             showNewFXMLByName("GetNewTask");
         });
 
         rejectTaskButton.setOnAction(event -> {
-            ObservableList<Task> taskList = comboBox.getItems();
-            Task currentTask = comboBox.getValue();
-            taskList.remove(currentTask);
-            comboBox.setItems(taskList);
-            TaskManager.reassignTaskFromUser(getClient(), currentTask);
-            reload();
+            try {
+                setWindow(webView.getScene().getWindow());
+                ObservableList<Task> taskList = comboBox.getItems();
+                Task currentTask = comboBox.getValue();
+                TaskManager.reassignTaskFromUser(getClient(), currentTask);
+                taskList.remove(currentTask);
+                comboBox.setItems(taskList);
+                reload();
+            } catch (SQLException e) {
+                hide();
+                showError(e);
+            }
         });
     }
 
@@ -116,7 +127,7 @@ public class MainController extends AuthorizedController {
         }
         urlRef.setText(task.getUrl());
         WebEngine engine = webView.getEngine();
-        engine.load("file:///error.html");
+        engine.load(HTMLManager.getPathToErr());
         urlRef.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override

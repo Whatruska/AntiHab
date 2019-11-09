@@ -1,6 +1,7 @@
 package GUI.Settings.ChangePassword;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import DataBase.Encryptor;
@@ -34,17 +35,25 @@ public class ChangePasswordController extends AuthorizedController {
     @FXML
     void initialize() {
         super.init();
+
         changePasswordButton.setOnAction(event -> {
-            if (validate()) {
-                String crypt = Encryptor.encrypt(confirmPasswordField.getText());
-                UserManager.updatePassword(getClient(), crypt);
-                changePasswordButton.getScene().getWindow().hide();
-                showNewFXMLByName("Settings");
+            setWindow(homeButton.getScene().getWindow());
+            try {
+                if (validate()) {
+                    hide();
+                    String crypt = Encryptor.encrypt(confirmPasswordField.getText());
+                    UserManager.updatePassword(getClient(), crypt);
+                    changePasswordButton.getScene().getWindow().hide();
+                    showNewFXMLByName("Settings");
+                }
+            } catch (SQLException e) {
+                hide();
+                showError(e);
             }
         });
     }
 
-    private boolean validate(){
+    private boolean validate() throws SQLException {
         String oldPass = oldPasswordField.getText();
         String encrypted = Encryptor.encrypt(oldPass);
         String passFromDB = UserManager.getPasswordFromDBByLogin(getClient().getLogin());

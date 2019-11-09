@@ -1,6 +1,7 @@
 package GUI.Register;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import Core.Builders.UserBuilder;
@@ -12,9 +13,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Border;
-
-import javax.swing.*;
 
 public class RegisterController extends Controller {
 
@@ -52,18 +50,24 @@ public class RegisterController extends Controller {
 
     @FXML
     void initialize() {
+
          registerButton.setOnAction(event -> {
-             if (validate() == EVERYTHING_IS_OK){
-                 UserManager.registerNewUser(formUser(), Encryptor.encrypt(passwordField.getText()));
-                 User user = UserManager.getUserByLogin(loginField.getText());
-                 System.out.println(user);
-                 registerButton.getScene().getWindow().hide();
-                 showNewFXMLByName("Login");
+             setWindow(registerButton.getScene().getWindow());
+             hide();
+             try {
+                 if (validate() == EVERYTHING_IS_OK){
+                     UserManager.registerNewUser(formUser(), Encryptor.encrypt(passwordField.getText()));
+                     User user = UserManager.getUserByLogin(loginField.getText());
+                     System.out.println(user);
+                     showNewFXMLByName("Login");
+                 }
+             } catch (SQLException e) {
+                 showError(e);
              }
          });
     }
 
-    private int validate(){
+    private int validate() throws SQLException {
         if (surnameField.getText().equalsIgnoreCase("")){
             return SURNAME_IS_EMPTY;
         } else if (nameField.getText().equalsIgnoreCase("")){

@@ -13,9 +13,9 @@ import java.util.TreeSet;
 public class TaskManager extends Manager {
     private static final String SELECT_SQL = "SELECT * FROM `TASKS` ";
     private static final String REGISTER_SQL = "INSERT INTO `TASKS` (`NUMBER`, `NAME`, `DIFFICULTY`, `IS_OCUPIED`, `DESCRIPTION`, `URL`) VALUES ('?', '?', '?', '?', '?', '?')";
-    private static final String UPDATE_SQL = "UPDATE `TASKS` SET NUMBER = '?', NAME = '?', DIFFICULTY = '?', IS_OCUPIED = '?', OCUPIED_BY = '?', DESCRIPTION = '?' URL = '?'";
+    private static final String UPDATE_SQL = "UPDATE `TASKS` SET NUMBER = '?', NAME = '?', DIFFICULTY = '?', IS_OCUPIED = '?', OCUPIED_BY = '?', DESCRIPTION = '?', URL = '?'";
 
-    public static ArrayList<Task> buildListOfTasksByStrings(String[] tasks){
+    public static ArrayList<Task> buildListOfTasksByStrings(String[] tasks) throws SQLException {
         ArrayList<Task> result = new ArrayList<>();
         for (String string : tasks){
             result.add(getTaskByNumber(Integer.parseInt(string)));
@@ -23,7 +23,7 @@ public class TaskManager extends Manager {
         return result;
     }
 
-    private static ArrayList<Task> getAvailableTasksByDifficulty(int difficulty){
+    private static ArrayList<Task> getAvailableTasksByDifficulty(int difficulty) throws SQLException {
         ArrayList<Task> taskList = getTaskListByDifficulty(difficulty);
         for (Task task : taskList){
             if (task.isOcupied()){
@@ -33,54 +33,41 @@ public class TaskManager extends Manager {
         return taskList;
     }
 
-    private static ArrayList<Task> getTaskListByDifficulty(int difficulty){
+    private static ArrayList<Task> getTaskListByDifficulty(int difficulty) throws SQLException {
         ArrayList<Task> result = new ArrayList<>();
         String sql = "SELECT * FROM `TASKS` WHERE DIFFICULTY = '" + difficulty + "'";
-        try {
-            ResultSet set = Executor.executeSelect(sql);
-            while (set.next()){
-                Task task = buildTaskFromSet(set);
-                result.add(task);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ResultSet set = Executor.executeSelect(sql);
+        while (set.next()){
+            Task task = buildTaskFromSet(set);
+            result.add(task);
         }
         return result;
     }
 
-    private static TreeSet<Integer> getAvaliableDifficultySet(){
+    private static TreeSet<Integer> getAvaliableDifficultySet() throws SQLException {
         TreeSet<Integer> result = new TreeSet<>();
         String sql = "SELECT `DIFFICULTY`, `IS_OCUPIED` FROM `TASKS`";
-        try {
-            ResultSet set = Executor.executeSelect(sql);
-            while (set.next()){
-                boolean isOcupied = set.getBoolean("IS_OCUPIED");
-                int difficulty = set.getInt("DIFFICULTY");
-                if (!isOcupied){
-                    result.add(difficulty);
-                }
+        ResultSet set = Executor.executeSelect(sql);
+        while (set.next()){
+            boolean isOcupied = set.getBoolean("IS_OCUPIED");
+            int difficulty = set.getInt("DIFFICULTY");
+            if (!isOcupied){
+                result.add(difficulty);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
-
         return result;
     }
 
-    public static Task getTaskByNumber(int number){
+    public static Task getTaskByNumber(int number) throws SQLException {
         String sql = SELECT_SQL + "WHERE NUMBER = '" + number + "'";
-        try {
-            ResultSet set = Executor.executeSelect(sql);
-            while (set.next()){
-                return buildTaskFromSet(set);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        ResultSet set = Executor.executeSelect(sql);
+        while (set.next()){
+            return buildTaskFromSet(set);
         }
         return new Task();
     }
 
-    public static Task getRandomTask(User user){
+    public static Task getRandomTask(User user) throws SQLException {
         int randomDifficulty = getRandomAvailableDifficulty(user);
         if (randomDifficulty > -1) {
             ArrayList<Task> tasks = getAvailableTasksByDifficulty(randomDifficulty);
@@ -94,7 +81,7 @@ public class TaskManager extends Manager {
         }
     }
 
-    private static int getRandomAvailableDifficulty(User user){
+    private static int getRandomAvailableDifficulty(User user) throws SQLException {
         int bottomLimit = user.getBottomLimit();
         int topLimit = user.getTopLimit();
         int d = topLimit - bottomLimit;
@@ -116,7 +103,7 @@ public class TaskManager extends Manager {
         return randomDifficulty;
     }
 
-    public static void updateTask(Task task){
+    public static void updateTask(Task task) throws SQLException {
         String sql = UPDATE_SQL;
 
         sql = addParamToSql(sql, "" + task.getNumber());
@@ -132,14 +119,10 @@ public class TaskManager extends Manager {
 
         sql = addParamToSql(sql, task.getUrl());
 
-        try {
-            Executor.execute(sql);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        Executor.execute(sql);
     }
 
-    public static int assignTaskOnUser(User user, Task task){
+    public static int assignTaskOnUser(User user, Task task) throws SQLException {
         if (!task.isOcupied()){
             user.addTask(task);
             task.setOcupied(true);
@@ -152,7 +135,7 @@ public class TaskManager extends Manager {
         }
     }
 
-    public static int reassignTaskFromUser(User user, Task task){
+    public static int reassignTaskFromUser(User user, Task task) throws SQLException {
         if (task.isOcupied()){
             user.removeTask(task);
             task.setOcupied(false);

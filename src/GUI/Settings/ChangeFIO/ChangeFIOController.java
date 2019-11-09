@@ -1,6 +1,7 @@
 package GUI.Settings.ChangeFIO;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import DataBase.Managers.UserManager;
@@ -33,13 +34,19 @@ public class ChangeFIOController extends AuthorizedController {
     @FXML
     void initialize() {
         super.init();
+
         changePasswordButton.setOnAction(event -> {
+            setWindow(homeButton.getScene().getWindow());
             if (validate()) {
-                getClient().setSurname(surnameField.getText());
-                getClient().setName(nameField.getText());
-                UserManager.updateUser(getClient());
-                changePasswordButton.getScene().getWindow().hide();
-                showNewFXMLByName("Settings");
+                hide();
+                try {
+                    getClient().setSurname(surnameField.getText());
+                    getClient().setName(nameField.getText());
+                    UserManager.updateUser(getClient());
+                    showNewFXMLByName("Settings");
+                } catch (SQLException e) {
+                    showError(e);
+                }
             }
         });
     }

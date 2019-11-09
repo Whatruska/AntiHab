@@ -1,20 +1,21 @@
 package GUI.GetNewTask;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import Core.Task;
 import DataBase.Managers.TaskManager;
 import GUI.AuthorizedController;
+import HTMLParser.HTMLManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
+import javafx.stage.Window;
 
 public class GetNewTaskController extends AuthorizedController {
-
-    private Task task = TaskManager.getRandomTask(getClient());
 
     @FXML
     private ResourceBundle resources;
@@ -44,44 +45,61 @@ public class GetNewTaskController extends AuthorizedController {
     void initialize() {
         super.init();
 
-        WebEngine engine = webView.getEngine();
+        Task task = null;
+        try {
+            task = TaskManager.getRandomTask(getClient());
+            WebEngine engine = webView.getEngine();
 
-        if (task.getUrl() == null){
-            showError();
-        } else {
-            reloadPage();
+            reloadPage(task);
 
+            Task finalTask = task;
             webView.setOnMouseClicked(event -> {
-                engine.load(task.getUrl());
+                engine.load(finalTask.getUrl());
             });
 
+            Task finalTask1 = task;
+
             getThisTaskButton.setOnAction(event -> {
-                TaskManager.assignTaskOnUser(getClient(), task);
-                getThisTaskButton.getScene().getWindow().hide();
-                showNewFXMLByName("Main");
+                setWindow(webView.getScene().getWindow());
+                hide();
+                try {
+                    TaskManager.assignTaskOnUser(getClient(), finalTask1);
+                    showNewFXMLByName("Main");
+                } catch (SQLException e) {
+                    showError(e);
+                }
             });
 
             randomNewTaskButton.setOnAction(event -> {
-                task = TaskManager.getRandomTask(getClient());
-                reloadPage();
+                setWindow(webView.getScene().getWindow());
+                Task t = null;
+                try {
+                    t = TaskManager.getRandomTask(getClient());
+                    reloadPage(t);
+                } catch (SQLException e) {
+                    hide();
+                    showError(e);
+                }
             });
+        } catch (SQLException e) {
+            setWindow(webView.getScene().getWindow());
+            hide();
+            showError(e);
         }
     }
 
-    private void showError(){
-        System.out.println("ERROR");
-        getThisTaskButton.setDisable(true);
-        randomNewTaskButton.setDisable(true);
+    private void reloadPage(Task task){
         WebEngine engine = webView.getEngine();
-        engine.load("file:///error.html");
-    }
+        if (task.getName() != null) {
+            engine.load(task.getUrl());
 
-    private void reloadPage(){
-        WebEngine engine = webView.getEngine();
-        engine.load(task.getUrl());
-
-        taskNumField.setText(task.toString());
-        difficultyField.setText(Integer.toString(task.getDifficulty()));
+            taskNumField.setText(task.toString());
+            difficultyField.setText(Integer.toString(task.getDifficulty()));
+        } else {
+            engine.load(HTMLManager.getPathToErr());
+            getThisTaskButton.setDisable(true);
+            randomNewTaskButton.setDisable(true);
+        }
     }
 }
 

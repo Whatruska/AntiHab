@@ -1,6 +1,7 @@
 package GUI.Settings.ChangeLogin;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import DataBase.Managers.UserManager;
@@ -29,17 +30,24 @@ public class ChangeLoginController extends AuthorizedController {
     @FXML
     void initialize() {
         super.init();
+
         changeLoginButton.setOnAction(event -> {
-            if (validate()) {
-                getClient().setLogin(changeLoginField.getText());
-                UserManager.updateUser(getClient());
-                changeLoginButton.getScene().getWindow().hide();
-                showNewFXMLByName("Settings");
+            setWindow(homeButton.getScene().getWindow());
+            try {
+                if (validate()) {
+                    hide();
+                    getClient().setLogin(changeLoginField.getText());
+                    UserManager.updateUser(getClient());
+                    showNewFXMLByName("Settings");
+                }
+            } catch (SQLException e) {
+                hide();
+                showError(e);
             }
         });
     }
 
-    private boolean validate(){
+    private boolean validate() throws SQLException {
         return changeLoginField.getText().length() > 0 && !UserManager.getAllLogins().contains(changeLoginField.getText());
     }
 }

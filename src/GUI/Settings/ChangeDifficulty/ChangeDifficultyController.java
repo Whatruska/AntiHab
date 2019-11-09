@@ -1,6 +1,7 @@
 package GUI.Settings.ChangeDifficulty;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import Core.User;
@@ -35,18 +36,25 @@ public class ChangeDifficultyController extends AuthorizedController {
     @FXML
     void initialize() {
         super.init();
+
         SpinnerValueFactory<Integer> bottomFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,100,10);
         SpinnerValueFactory<Integer> topFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,100,10);
         bottomLimitSpinner.setValueFactory(bottomFactory);
         topLimitSpinner.setValueFactory(topFactory);
 
         changeDifficultyButton.setOnAction(event -> {
+            setWindow(homeButton.getScene().getWindow());
             if (validate()) {
-                getClient().setBottomLimit(bottomLimitSpinner.getValue());
-                getClient().setTopLimit(topLimitSpinner.getValue());
-                UserManager.updateUser(getClient());
-                changeDifficultyButton.getScene().getWindow().hide();
-                showNewFXMLByName("Settings");
+                hide();
+                try {
+                    getClient().setBottomLimit(bottomLimitSpinner.getValue());
+                    getClient().setTopLimit(topLimitSpinner.getValue());
+                    UserManager.updateUser(getClient());
+                    changeDifficultyButton.getScene().getWindow().hide();
+                    showNewFXMLByName("Settings");
+                } catch (SQLException e) {
+                    showError(e);
+                }
             }
         });
     }
