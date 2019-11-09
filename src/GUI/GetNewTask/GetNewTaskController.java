@@ -1,5 +1,6 @@
 package GUI.GetNewTask;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -8,6 +9,7 @@ import Core.Task;
 import DataBase.Managers.TaskManager;
 import GUI.AuthorizedController;
 import HTMLParser.HTMLManager;
+import HTMLParser.Parser;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -53,9 +55,6 @@ public class GetNewTaskController extends AuthorizedController {
             reloadPage(task);
 
             Task finalTask = task;
-            webView.setOnMouseClicked(event -> {
-                engine.load(finalTask.getUrl());
-            });
 
             Task finalTask1 = task;
 
@@ -91,7 +90,12 @@ public class GetNewTaskController extends AuthorizedController {
     private void reloadPage(Task task){
         WebEngine engine = webView.getEngine();
         if (task.getName() != null) {
-            engine.load(task.getUrl());
+            try {
+                Parser.parseTaskFormNumber(task.getNumber());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            engine.load(HTMLManager.getPathToHTMLTask());
 
             taskNumField.setText(task.toString());
             difficultyField.setText(Integer.toString(task.getDifficulty()));

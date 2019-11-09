@@ -4,21 +4,12 @@ public class Task {
 
     private int number;
     private int difficulty;
-    private String decription;
     private String url;
     private boolean isOcupied;
     private int ocupiedBy;
     private String name;
 
     public Task() {}
-
-    public String getDecription() {
-        return decription;
-    }
-
-    public void setDecription(String decription) {
-        this.decription = decription;
-    }
 
     public String getName() {
         return name;

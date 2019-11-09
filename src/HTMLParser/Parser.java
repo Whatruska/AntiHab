@@ -1,26 +1,21 @@
 package HTMLParser;
 
+import Core.Task;
+import DataBase.Managers.TaskManager;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 
 public class Parser {
     private static final String ACMP_URL = "https://acmp.ru/index.asp?main=task&id_task=";
 
-    public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите номер задачи : ");
-        int number = scanner.nextInt();
-        parseTaskFormNumber(number);
-    }
-
-    private static void parseTaskFormNumber(int number) throws IOException {
+    public static void parseTaskFormNumber(int number) throws IOException {
         parseTaskFromUrl(ACMP_URL + number);
     }
 
@@ -39,7 +34,7 @@ public class Parser {
     }
 
     private static void writeDocumentToFile(Document document) throws IOException {
-        File file = new File(HTMLManager.getPathToHTMLTask());
+        File file = new File(HTMLManager.getPathToHMTLTaskForParser());
         PrintWriter out = new PrintWriter(file);
         out.append(document.toString());
         out.flush();

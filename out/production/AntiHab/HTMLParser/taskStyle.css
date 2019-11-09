@@ -1,7 +1,15 @@
-.main, tbody, h4, h2:nth-of-type(3){
+body{
+    background-color: #080A03;
+    color: #F0F0F0;
+    padding: 50px 0px;
+    font-size: 20px;
+    font-family: Arsenal;
+}
+
+h2:nth-of-type(3), h4, table{
     display: none !important;
 }
 
-h2, h1, p{
+h1, h2, p{
     text-align: center;
 }

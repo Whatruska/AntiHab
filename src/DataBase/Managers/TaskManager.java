@@ -12,8 +12,8 @@ import java.util.TreeSet;
 
 public class TaskManager extends Manager {
     private static final String SELECT_SQL = "SELECT * FROM `TASKS` ";
-    private static final String REGISTER_SQL = "INSERT INTO `TASKS` (`NUMBER`, `NAME`, `DIFFICULTY`, `IS_OCUPIED`, `DESCRIPTION`, `URL`) VALUES ('?', '?', '?', '?', '?', '?')";
-    private static final String UPDATE_SQL = "UPDATE `TASKS` SET NUMBER = '?', NAME = '?', DIFFICULTY = '?', IS_OCUPIED = '?', OCUPIED_BY = '?', DESCRIPTION = '?', URL = '?'";
+    private static final String REGISTER_SQL = "INSERT INTO `TASKS` (`NUMBER`, `NAME`, `DIFFICULTY`, `IS_OCUPIED`, `URL`) VALUES ('?', '?', '?', '?', '?')";
+    private static final String UPDATE_SQL = "UPDATE `TASKS` SET NUMBER = '?', NAME = '?', DIFFICULTY = '?', IS_OCUPIED = '?', OCUPIED_BY = '?', URL = '?'";
 
     public static ArrayList<Task> buildListOfTasksByStrings(String[] tasks) throws SQLException {
         ArrayList<Task> result = new ArrayList<>();
@@ -115,8 +115,6 @@ public class TaskManager extends Manager {
 
         sql = addParamToSql(sql, "" + task.getOcupiedBy());
 
-        sql = addParamToSql(sql, "" + task.getDecription());
-
         sql = addParamToSql(sql, task.getUrl());
 
         sql += " WHERE NUMBER = \"" + task.getNumber() + "\"";
@@ -155,14 +153,12 @@ public class TaskManager extends Manager {
         String url = set.getString("URL");
         Boolean isOcupied = set.getBoolean("IS_OCUPIED");
         Integer ocupiedBy = set.getInt("OCUPIED_BY");
-        String description = set.getString("DESCRIPTION");
 
         return TaskBuilder
                 .number(number)
                 .name(name)
                 .difficulty(difficulty)
                 .url(url)
-                .description(description)
                 .ocupied(isOcupied)
                 .ocupiedBy(ocupiedBy)
                 .build();

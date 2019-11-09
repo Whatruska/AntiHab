@@ -1,5 +1,6 @@
 package GUI.Main;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import DataBase.Managers.TaskManager;
 import GUI.AuthorizedController;
 import GUI.Loader;
 import HTMLParser.HTMLManager;
+import HTMLParser.Parser;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -67,16 +69,6 @@ public class MainController extends AuthorizedController {
 
         helloText.setText("Привет, " + getClient().getName());
 
-        webView.setOnMouseClicked(event -> {
-            Task task = comboBox.getValue();
-            if (task == null){
-                task = new Task();
-                task.setUrl(HTMLManager.getPathToErr());
-            }
-
-            engine.load(task.getUrl());
-        });
-
         logoutButton.setOnAction(event -> {
             setWindow(webView.getScene().getWindow());
             hide();
@@ -116,6 +108,8 @@ public class MainController extends AuthorizedController {
                 showError(e);
             }
         });
+
+        reload();
     }
 
     private ObservableList<Task> convertToObservableList(ArrayList<Task> tasks){
@@ -127,10 +121,22 @@ public class MainController extends AuthorizedController {
         if (task == null){
             task = new Task();
             task.setUrl("");
+            task.setNumber(0);
         }
         urlRef.setText(task.getUrl());
         WebEngine engine = webView.getEngine();
-        engine.load(HTMLManager.getPathToErr());
+        try {
+            if (task.getNumber() != 0) {
+                Parser.parseTaskFormNumber(task.getNumber());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String url = HTMLManager.getPathToHTMLTask();
+        if (task.getNumber() == 0){
+            url = HTMLManager.getPathtoStartPage();
+        }
+        engine.load(url);
         urlRef.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
