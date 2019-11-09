@@ -16,6 +16,11 @@ public class TaskBuilder {
         return null;
     }
 
+    public static TaskBuilder description(String description){
+        task.setDecription(description);
+        return null;
+    }
+
     public static TaskBuilder difficulty(int score){
         task.setDifficulty(score);
         return null;
