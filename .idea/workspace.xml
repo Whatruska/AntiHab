@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DataBase/Managers/RegisterManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Managers/TaskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Managers/TaskManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Loader.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -85,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/Loader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+            <state relative-caret-position="420">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,6 +218,29 @@
             <path>
               <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
               <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -276,7 +296,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -426,25 +446,24 @@
       <workItem from="1573234000073" duration="8854000" />
       <workItem from="1573277708194" duration="2453000" />
       <workItem from="1573280576324" duration="17435000" />
-      <workItem from="1573309963551" duration="9258000" />
+      <workItem from="1573309963551" duration="10235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94750000" />
+    <option name="totallyTimeSpent" value="95727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1410" height="876" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.29020467" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.29020467" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.32967836" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32780612" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32780612" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39923468" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -458,7 +477,7 @@
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32908162" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Terminal" order="16" weight="0.32780612" />
+      <window_info anchor="bottom" id="Terminal" order="16" visible="true" weight="0.32780612" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -937,8 +956,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Loader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        <state relative-caret-position="420">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

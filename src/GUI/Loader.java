@@ -28,8 +28,7 @@ public class Loader extends Application {
 
 
     public static void main(String[] args) throws SQLException {
-        //launch(args);
-        RegisterManager.registerAllTask();
+        launch(args);
     }
 
     public static Application getInstance(){
