@@ -7,12 +7,15 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Connector {
-    private static Connection connection = getConnection();
+    private static Connection connection = null;
 
-    public static Connection getInstantConnection(){
+    public static Connection getInstantConnection() throws SQLException {
+        if (connection == null){
+            connection = getConnection();
+        }
         return connection;
     }
-    private static Connection getConnection(){
+    private static Connection getConnection() throws SQLException {
         ResourceBundle resource = ResourceBundle.getBundle("DataBase.database");
 
         String url = resource.getString("db.url");
@@ -22,22 +25,22 @@ public class Connector {
 
         Connection connection = null;
 
+        Driver driver = null;
         try {
-            Driver driver = (Driver) Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-            DriverManager.registerDriver(driver);
-            connection = DriverManager.getConnection(
-                    url + table + "?serverTimezone=UTC",
-                    login,
-                    pass
-            );
-        } catch (SQLException e) {
-            System.out.println("Connection error");
+            driver = (Driver) Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
+        DriverManager.registerDriver(driver);
+        connection = DriverManager.getConnection(
+                url + table + "?serverTimezone=UTC",
+                login,
+                pass
+        );
 
         return connection;
     }

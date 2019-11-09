@@ -45,7 +45,7 @@ public class UserManager extends Manager {
     }
 
     public static void updatePassword(User user, String password) throws SQLException {
-        Executor.execute("UPDATE `USERS` SET PASSWORD=\"" + password + "\"");
+        Executor.execute("UPDATE `USERS` SET PASSWORD=\"" + password + "\" WHERE LOGIN = \"" + user.getLogin() + "\"");
     }
 
     public static void registerNewUser(User user, String password) throws SQLException {
@@ -78,6 +78,8 @@ public class UserManager extends Manager {
         sql = addParamToSql(sql, Integer.toString(user.getTopLimit()));
 
         sql = addParamToSql(sql, taskListToString(user.getTasks()));
+
+        sql += " WHERE LOGIN = \"" + user.getLogin() + "\"";
 
         Executor.execute(sql);
     }

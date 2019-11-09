@@ -41,8 +41,8 @@
             <String fx:value="btn-out" />
          </styleClass>
       </Button>
-      <Spinner fx:id="bottomLimitSpinner" layoutX="201.0" layoutY="225.0" prefHeight="38.0" prefWidth="216.0" />
-      <Spinner fx:id="topLimitSpinner" layoutX="201.0" layoutY="364.0" prefHeight="38.0" prefWidth="216.0" />
+      <Spinner fx:id="topLimitSpinner" layoutX="201.0" layoutY="225.0" prefHeight="38.0" prefWidth="216.0" />
+      <Spinner fx:id="bottomLimitSpinner" layoutX="201.0" layoutY="364.0" prefHeight="38.0" prefWidth="216.0" />
       <Text layoutX="195.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Верхний порог" textAlignment="CENTER">
          <font>
             <Font name="Avenir Book" size="32.0" />

@@ -4,6 +4,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import CSSManager.CSSManager;
 import Core.Builders.UserBuilder;
 import Core.User;
 import DataBase.Encryptor;
@@ -53,12 +54,11 @@ public class RegisterController extends Controller {
 
          registerButton.setOnAction(event -> {
              setWindow(registerButton.getScene().getWindow());
-             hide();
              try {
                  if (validate() == EVERYTHING_IS_OK){
+                     hide();
                      UserManager.registerNewUser(formUser(), Encryptor.encrypt(passwordField.getText()));
                      User user = UserManager.getUserByLogin(loginField.getText());
-                     System.out.println(user);
                      showNewFXMLByName("Login");
                  }
              } catch (SQLException e) {
@@ -68,17 +68,29 @@ public class RegisterController extends Controller {
     }
 
     private int validate() throws SQLException {
+        CSSManager.setNormal(surnameField);
+        CSSManager.setNormal(nameField);
+        CSSManager.setNormal(loginField);
+        CSSManager.setNormal(passwordField);
+        CSSManager.setNormal(confirmPasswordField);
         if (surnameField.getText().equalsIgnoreCase("")){
+            CSSManager.setError(loginField);
             return SURNAME_IS_EMPTY;
         } else if (nameField.getText().equalsIgnoreCase("")){
+            CSSManager.setError(nameField);
             return NAME_IS_EMPTY;
         } else if (loginField.getText().equalsIgnoreCase("")){
+            CSSManager.setError(loginField);
             return LOGIN_IS_EMPTY;
         } else if (UserManager.getAllLogins().contains(loginField.getText())){
+            CSSManager.setError(loginField);
             return LOGIN_IS_OCUPIED;
         } else if (passwordField.getText().length() <= 7 || passwordField.getText().equalsIgnoreCase("")){
+            CSSManager.setError(passwordField);
             return PASSWORD_IS_SHORT;
         } else if (!passwordField.getText().equalsIgnoreCase(confirmPasswordField.getText())){
+            CSSManager.setError(passwordField);
+            CSSManager.setError(confirmPasswordField);
             return PASSWORDS_DOES_NOT_MATCHES;
         }
         return EVERYTHING_IS_OK;

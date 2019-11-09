@@ -47,6 +47,7 @@ public class Controller {
     }
 
     protected final void showError(Exception e){
-
+        e.printStackTrace();
+        showNewFXMLByName("Error");
     }
 }

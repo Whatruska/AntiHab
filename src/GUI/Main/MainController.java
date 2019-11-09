@@ -107,6 +107,9 @@ public class MainController extends AuthorizedController {
                 TaskManager.reassignTaskFromUser(getClient(), currentTask);
                 taskList.remove(currentTask);
                 comboBox.setItems(taskList);
+                if (taskList.size() == 0){
+                    comboBox.setValue(null);
+                }
                 reload();
             } catch (SQLException e) {
                 hide();

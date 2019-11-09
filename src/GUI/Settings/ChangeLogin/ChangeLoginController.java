@@ -4,6 +4,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import CSSManager.CSSManager;
 import DataBase.Managers.UserManager;
 import GUI.AuthorizedController;
 import javafx.fxml.FXML;
@@ -48,7 +49,12 @@ public class ChangeLoginController extends AuthorizedController {
     }
 
     private boolean validate() throws SQLException {
-        return changeLoginField.getText().length() > 0 && !UserManager.getAllLogins().contains(changeLoginField.getText());
+        CSSManager.setNormal(changeLoginField);
+        if (changeLoginField.getText().length() > 0 && !UserManager.getAllLogins().contains(changeLoginField.getText())){
+            CSSManager.setError(changeLoginField);
+            return true;
+        }
+        return false;
     }
 }
 

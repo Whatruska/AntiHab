@@ -3,6 +3,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import CSSManager.CSSManager;
 import Core.User;
 import DataBase.Encryptor;
 import DataBase.Managers.UserManager;
@@ -63,6 +64,8 @@ public class LoginController extends Controller {
                 AuthorizedController.setClient(user);
                 return true;
             }
+            CSSManager.setError(loginField);
+            CSSManager.setError(passwordField);
             return false;
         } catch (SQLException e) {
             hide();

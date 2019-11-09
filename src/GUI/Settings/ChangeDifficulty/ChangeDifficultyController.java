@@ -4,14 +4,13 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import Core.User;
-import DataBase.Managers.TaskManager;
 import DataBase.Managers.UserManager;
 import GUI.AuthorizedController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.input.MouseEvent;
 
 public class ChangeDifficultyController extends AuthorizedController {
 
@@ -37,10 +36,10 @@ public class ChangeDifficultyController extends AuthorizedController {
     void initialize() {
         super.init();
 
-        SpinnerValueFactory<Integer> bottomFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,100,10);
-        SpinnerValueFactory<Integer> topFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,100,10);
-        bottomLimitSpinner.setValueFactory(bottomFactory);
-        topLimitSpinner.setValueFactory(topFactory);
+        int bottom = getClient().getBottomLimit();
+        int top = getClient().getTopLimit();
+
+        initFactories(bottom, top);
 
         changeDifficultyButton.setOnAction(event -> {
             setWindow(homeButton.getScene().getWindow());
@@ -57,6 +56,18 @@ public class ChangeDifficultyController extends AuthorizedController {
                 }
             }
         });
+    }
+
+    private void initFactories(int bottom, int top){
+        if (bottom > top){
+            bottom = top;
+        }
+
+        SpinnerValueFactory<Integer> bottomFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,top, bottom);
+        SpinnerValueFactory<Integer> topFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(bottom,100,top);
+
+        bottomLimitSpinner.setValueFactory(bottomFactory);
+        topLimitSpinner.setValueFactory(topFactory);
     }
 
     private boolean validate(){

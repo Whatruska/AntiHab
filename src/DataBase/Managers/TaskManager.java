@@ -119,6 +119,8 @@ public class TaskManager extends Manager {
 
         sql = addParamToSql(sql, task.getUrl());
 
+        sql += " WHERE NUMBER = \"" + task.getNumber() + "\"";
+
         Executor.execute(sql);
     }
 
