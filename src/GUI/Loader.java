@@ -17,7 +17,7 @@ public class Loader extends Application {
     public void start(Stage primaryStage) throws Exception{
         mainScene = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("Login/LoginForm.fxml"));
-        root.getStylesheets().add(getClass().getResource("css/style.css").toExternalForm());
+        root.getStylesheets().add(getClass().getResource("css/mainStyle.css").toExternalForm());
         mainScene.setScene(new Scene(root, 599, 549));
         mainScene.setResizable(false);
         mainScene.show();

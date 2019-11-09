@@ -2,35 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CSSManager/CSSManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Error/ErrorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Error/ErrorForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jsoup-1.12.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HTMLParser/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HTMLParser/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HTMLParser/taskStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cssdialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Connector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Connector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Managers/TaskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Managers/TaskManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Managers/UserManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Managers/UserManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AntiHab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AntiHab.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Login/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Error/ErrorForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Error/ErrorForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/GetNewTask/GetNewTaskForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/GetNewTask/GetNewTaskForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Login/LoginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Login/LoginForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Register/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Register/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Register/RegisterForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Register/RegisterForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeDifficulty/ChangeDifficultyForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeDifficulty/ChangeDifficultyForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeFIO/ChangeFIOController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeFIO/ChangeFIOController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeFIO/ChangeFIOForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeFIO/ChangeFIOForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeLogin/ChangeLoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeLogin/ChangeLoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeLogin/ChangeLoginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangeLogin/ChangeLoginForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangePassword/ChangePasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangePassword/ChangePasswordController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangePassword/ChangePasswordForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/ChangePassword/ChangePasswordForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Connector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Managers/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Managers/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/SettingsForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Settings/SettingsForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/HTMLManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/HTMLManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Register/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Register/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Error/ErrorForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Error/ErrorForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/LoginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Login/LoginForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Main/MainForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main/MainForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Register/RegisterForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Register/RegisterForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Settings/SettingsForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Settings/SettingsForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/css/mainStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTMLParser/HTMLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLParser/HTMLManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTMLParser/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLParser/error.html" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -104,14 +117,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/production/AntiHab/HTMLParser/task.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java">
+        <entry file="file://$PROJECT_DIR$/src/HTMLParser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="65" column="38" lean-forward="true" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+            <state relative-caret-position="270">
+              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/production/AntiHab/HTMLParser/taskStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -121,9 +148,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -138,11 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GUI/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/GUI/Login/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/Core/TaskCase.java" />
-        <option value="$PROJECT_DIR$/res/iconfinder_java_401285.svg" />
-        <option value="$PROJECT_DIR$/res/css/style.css" />
         <option value="$PROJECT_DIR$/res/FXML/Main.java" />
         <option value="$PROJECT_DIR$/src/GUI/Register/RegisterForm.fxml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
@@ -165,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/GUI/ShowResult/ShowResultController.java" />
         <option value="$PROJECT_DIR$/src/GUI/PassTask/PassTaskController.java" />
         <option value="$PROJECT_DIR$/src/Core/User.java" />
-        <option value="$PROJECT_DIR$/src/HTMLParser/HTMLManager.java" />
         <option value="$PROJECT_DIR$/src/Core/Task.java" />
         <option value="$PROJECT_DIR$/src/Core/Builders/TaskBuilder.java" />
         <option value="$PROJECT_DIR$/src/DataBase/database.properties" />
@@ -175,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java" />
         <option value="$PROJECT_DIR$/src/GUI/Error/LoginForm.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/Error/ErrorController.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/DataBase/Connector.java" />
         <option value="$PROJECT_DIR$/src/GUI/Main/MainController.java" />
         <option value="$PROJECT_DIR$/src/DataBase/Managers/UserManager.java" />
@@ -189,6 +209,13 @@
         <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeFIO/ChangeFIOController.java" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginController.java" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Controller.java" />
+        <option value="$PROJECT_DIR$/src/HTMLParser/taskStyle.css" />
+        <option value="$PROJECT_DIR$/src/HTMLParser/error.html" />
+        <option value="$PROJECT_DIR$/src/HTMLParser/task.html" />
+        <option value="$PROJECT_DIR$/src/HTMLParser/HTMLManager.java" />
+        <option value="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/taskStyle.css" />
+        <option value="$PROJECT_DIR$/src/HTMLParser/Parser.java" />
       </list>
     </option>
   </component>
@@ -209,8 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,31 +246,51 @@
             <path>
               <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
               <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="HTMLParser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
               <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CSSManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="Settings" type="462c0819:PsiDirectoryNode" />
+              <item name="HTMLParser" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,7 +311,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/GUI/Error" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/production/AntiHab/HTMLParser" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -282,21 +327,21 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/HTMLParser" />
       <recent name="$PROJECT_DIR$/src/DataBase" />
       <recent name="$PROJECT_DIR$/src/GUI/Main" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/GUI" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/out/production/AntiHab/HTMLParser" />
       <recent name="$PROJECT_DIR$/src/GUI/Error" />
       <recent name="$PROJECT_DIR$/src/GUI/ShowResult" />
       <recent name="$PROJECT_DIR$/src/GUI/PassTask" />
       <recent name="$PROJECT_DIR$/src/DataBase" />
-      <recent name="$PROJECT_DIR$/src/GUI/GetNewTask" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -311,7 +356,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Parser">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -342,6 +387,20 @@
       </extension>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Parser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HTMLParser.Parser" />
+      <module name="AntiHab" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HTMLParser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -383,6 +442,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Parser" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -404,25 +468,26 @@
       <workItem from="1573223165039" duration="308000" />
       <workItem from="1573234000073" duration="8854000" />
       <workItem from="1573277708194" duration="2453000" />
-      <workItem from="1573280576324" duration="11606000" />
+      <workItem from="1573280576324" duration="17435000" />
+      <workItem from="1573309963551" duration="2291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79663000" />
+    <option name="totallyTimeSpent" value="87783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1410" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.28581873" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.29020467" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.32967836" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32780612" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32780612" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39923468" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -503,12 +568,6 @@
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI/Login/LoginController.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -517,24 +576,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/res/lib/javafx-graphics-14-ea+1.jar!/META-INF/MANIFEST.MF" />
-    <entry file="file://$PROJECT_DIR$/src/GUI/Register/RegisterForm.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid4748.log" />
-    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordForm.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/SettingsForm.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeLogin/ChangeLoginForm.fxml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -609,13 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="197" selection-start-line="197" selection-end-line="197" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTMLParser/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -741,16 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataBase/Executor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -795,38 +819,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HTMLParser/HTMLManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="82" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
-          <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/css/error.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/css/style.css">
+    <entry file="file://$PROJECT_DIR$/src/GUI/css/error.css" />
+    <entry file="file://$PROJECT_DIR$/src/GUI/css/mainStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1005">
           <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Login/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,8 +894,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangePassword/ChangePasswordController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="317">
           <caret line="65" column="38" lean-forward="true" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Login/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTMLParser/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTMLParser/HTMLManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
+          <folding>
+            <element signature="e#158#159#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTMLParser/taskStyle.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTMLParser/task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/AntiHab/HTMLParser/task.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/AntiHab/HTMLParser/taskStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HTMLParser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

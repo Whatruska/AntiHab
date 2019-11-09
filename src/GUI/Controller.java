@@ -1,8 +1,10 @@
 package GUI;
 
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -34,7 +36,8 @@ public class Controller {
         }
         Parent root = loader.getRoot();
         Stage stage = Loader.getMainScene();
-        stage.setScene(new Scene(root));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
         stage.show();
     }
 
