@@ -2,28 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/HTMLParser/start.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HTMLParser/start_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataBase/Managers/RegisterManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/Core/Builders/TaskBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/Core/Builders/TaskBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/Core/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/Core/Task.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Managers/TaskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/DataBase/Managers/TaskManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/GetNewTask/GetNewTaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/GetNewTask/GetNewTaskController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Main/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/HTMLManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/HTMLManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/taskStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/HTMLParser/taskStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Builders/TaskBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Builders/TaskBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Core/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Core/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AntiHab/GUI/Loader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTMLParser/HTMLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLParser/HTMLManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTMLParser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLParser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTMLParser/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLParser/task.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTMLParser/taskStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLParser/taskStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Loader.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,10 +83,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/HTMLParser/start.css">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Loader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="262">
+              <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-293">
+              <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/RegisterManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="44" column="70" lean-forward="true" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,9 +123,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -128,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GUI/Main.java" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/RegisterForm.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/ChangePassword/SettingsForm.fxml" />
@@ -150,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/Core/User.java" />
         <option value="$PROJECT_DIR$/src/DataBase/database.properties" />
         <option value="$PROJECT_DIR$/src/DataBase/Managers/Manager.java" />
-        <option value="$PROJECT_DIR$/src/GUI/Loader.java" />
         <option value="$PROJECT_DIR$/src/GUI/Settings/SettingsController.java" />
         <option value="$PROJECT_DIR$/src/GUI/Error/LoginForm.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/Error/ErrorController.java" />
@@ -169,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/HTMLParser/error.html" />
         <option value="$PROJECT_DIR$/src/Core/Task.java" />
         <option value="$PROJECT_DIR$/src/Core/Builders/TaskBuilder.java" />
-        <option value="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" />
         <option value="$PROJECT_DIR$/src/HTMLParser/task.html" />
         <option value="$PROJECT_DIR$/src/HTMLParser/Parser.java" />
         <option value="$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskController.java" />
@@ -179,6 +188,9 @@
         <option value="$PROJECT_DIR$/src/HTMLParser/taskStyle.css" />
         <option value="$PROJECT_DIR$/src/HTMLParser/start_page.html" />
         <option value="$PROJECT_DIR$/src/HTMLParser/start.css" />
+        <option value="$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java" />
+        <option value="$PROJECT_DIR$/src/DataBase/Managers/RegisterManager.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Loader.java" />
       </list>
     </option>
   </component>
@@ -215,7 +227,20 @@
               <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
               <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="HTMLParser" type="462c0819:PsiDirectoryNode" />
+              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
+              <item name="Managers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AntiHab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AntiHab" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -401,12 +426,12 @@
       <workItem from="1573234000073" duration="8854000" />
       <workItem from="1573277708194" duration="2453000" />
       <workItem from="1573280576324" duration="17435000" />
-      <workItem from="1573309963551" duration="6188000" />
+      <workItem from="1573309963551" duration="9258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91680000" />
+    <option name="totallyTimeSpent" value="94750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1410" height="876" extended-state="0" />
@@ -514,10 +539,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GUI/Settings/ChangeDifficulty/ChangeDifficultyForm.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GetNewTask/GetNewTaskForm.fxml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -781,16 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="144" selection-start-line="15" selection-start-column="144" selection-end-line="15" selection-end-column="144" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Core/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -812,16 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4">
           <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="86" lean-forward="true" selection-start-line="18" selection-start-column="86" selection-end-line="18" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -911,6 +912,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/TaskManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-293">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataBase/Managers/RegisterManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="44" column="70" lean-forward="true" selection-start-line="44" selection-start-column="70" selection-end-line="44" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

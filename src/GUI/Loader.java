@@ -1,10 +1,13 @@
 package GUI;
 
+import DataBase.Managers.RegisterManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.sql.SQLException;
 
 public class Loader extends Application {
     private static Stage mainScene = new Stage();
@@ -24,8 +27,9 @@ public class Loader extends Application {
     }
 
 
-    public static void main(String[] args) {
-        launch(args);
+    public static void main(String[] args) throws SQLException {
+        //launch(args);
+        RegisterManager.registerAllTask();
     }
 
     public static Application getInstance(){

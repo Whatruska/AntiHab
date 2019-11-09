@@ -12,7 +12,6 @@ import java.util.TreeSet;
 
 public class TaskManager extends Manager {
     private static final String SELECT_SQL = "SELECT * FROM `TASKS` ";
-    private static final String REGISTER_SQL = "INSERT INTO `TASKS` (`NUMBER`, `NAME`, `DIFFICULTY`, `IS_OCUPIED`, `URL`) VALUES ('?', '?', '?', '?', '?')";
     private static final String UPDATE_SQL = "UPDATE `TASKS` SET NUMBER = '?', NAME = '?', DIFFICULTY = '?', IS_OCUPIED = '?', OCUPIED_BY = '?', URL = '?'";
 
     public static ArrayList<Task> buildListOfTasksByStrings(String[] tasks) throws SQLException {
