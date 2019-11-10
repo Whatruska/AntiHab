@@ -1,6 +1,5 @@
 package GUI;
 
-import DataBase.Managers.RegisterManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

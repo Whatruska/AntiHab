@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class Controller {
 
@@ -28,7 +29,9 @@ public class Controller {
 
     protected final void showNewFXMLByPath(String path){
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource(path));
+
+        URL url = getClass().getResource(path);
+        loader.setLocation(url);
         try {
             loader.load();
         } catch (IOException e) {

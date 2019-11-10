@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import Core.Task;
 import DataBase.Managers.TaskManager;
+import DataBase.Managers.UserManager;
 import GUI.AuthorizedController;
 import HTMLParser.HTMLManager;
 import HTMLParser.Parser;
@@ -50,18 +51,16 @@ public class GetNewTaskController extends AuthorizedController {
         Task task = null;
         try {
             task = TaskManager.getRandomTask(getClient());
-            WebEngine engine = webView.getEngine();
 
             reloadPage(task);
 
-            Task finalTask = task;
-
-            Task finalTask1 = task;
+            Task finalTask1 = task.copy();
 
             getThisTaskButton.setOnAction(event -> {
                 setWindow(webView.getScene().getWindow());
                 hide();
                 try {
+                    setClient(UserManager.getUserByLogin(getClient().getLogin()));
                     TaskManager.assignTaskOnUser(getClient(), finalTask1);
                     showNewFXMLByName("Main");
                 } catch (SQLException e) {

@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import Core.Task;
 import DataBase.Managers.TaskManager;
+import DataBase.Managers.UserManager;
 import GUI.AuthorizedController;
 import GUI.Loader;
 import HTMLParser.HTMLManager;
@@ -58,7 +59,6 @@ public class MainController extends AuthorizedController {
 
     @FXML
     void initialize() {
-
         WebEngine engine = webView.getEngine();
 
         ObservableList<Task> tasks = convertToObservableList(getClient().getTasks());

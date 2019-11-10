@@ -15,6 +15,10 @@ import java.io.PrintWriter;
 public class Parser {
     private static final String ACMP_URL = "https://acmp.ru/index.asp?main=task&id_task=";
 
+    public static void main(String[] args) throws IOException {
+        parseTaskFormNumber(754);
+    }
+
     public static void parseTaskFormNumber(int number) throws IOException {
         parseTaskFromUrl(ACMP_URL + number);
     }

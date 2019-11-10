@@ -63,4 +63,15 @@ public class Task {
     public String toString() {
         return getNumber() + " - " + getName();
     }
+
+    public Task copy(){
+        Task copy = new Task();
+        copy.setName(name);
+        copy.setNumber(number);
+        copy.setOcupiedBy(ocupiedBy);
+        copy.setOcupied(isOcupied);
+        copy.setDifficulty(difficulty);
+        copy.setUrl(url);
+        return copy;
+    }
 }
