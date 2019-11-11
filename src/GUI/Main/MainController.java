@@ -130,15 +130,16 @@ public class MainController extends AuthorizedController {
         }
         urlRef.setText(task.getUrl());
         WebEngine engine = webView.getEngine();
-        try {
-            if (task.getNumber() != 0) {
-                Parser.parseTaskFormNumber(task.getNumber());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            if (task.getNumber() != 0) {
+//                Parser.parseTaskFormNumber(task.getNumber());
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
-        String url = HTMLManager.getPathToHTMLTask();
+        String url = task.getUrl();
+        //String url = HTMLManager.getPathToHTMLTask();
         if (task.getNumber() == 0){
             url = HTMLManager.getPathtoStartPage();
         }
