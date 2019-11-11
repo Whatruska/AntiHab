@@ -94,13 +94,12 @@ public class GetNewTaskController extends AuthorizedController {
     private void reloadPage(Task task){
         WebEngine engine = webView.getEngine();
         if (task.getName() != null) {
-//            try {
-//                Parser.parseTaskFormNumber(task.getNumber());
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-            engine.load(task.getUrl());
-            //engine.load(HTMLManager.getPathToHTMLTask());
+            try {
+                Parser.parseTaskFormNumber(task.getNumber());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            engine.load(HTMLManager.getPathToHTMLTask());
 
             taskNumField.setText(task.toString());
             difficultyField.setText(Integer.toString(task.getDifficulty()));

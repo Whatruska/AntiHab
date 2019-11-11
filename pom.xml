@@ -8,16 +8,16 @@
     <artifactId>AntiHab</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <packaging>izpack-jar</packaging>
+<!--    <packaging>izpack-jar</packaging>-->
 
-    <properties>
-        <!-- Installer variables -->
-        <staging.dir>${project.build.directory}/staging</staging.dir>
-        <info.appName>My Killer Application</info.appName>
-        <info.appsubpath>my-killer-app/standard</info.appsubpath>
-        <izpack.dir.app>${basedir}/izpack</izpack.dir.app>
-        <staging.dir.app>${staging.dir}/appfiles</staging.dir.app>
-    </properties>
+<!--    <properties>-->
+<!--        &lt;!&ndash; Installer variables &ndash;&gt;-->
+<!--        <staging.dir>${project.build.directory}/staging</staging.dir>-->
+<!--        <info.appName>My Killer Application</info.appName>-->
+<!--        <info.appsubpath>my-killer-app/standard</info.appsubpath>-->
+<!--        <izpack.dir.app>${basedir}/izpack</izpack.dir.app>-->
+<!--        <staging.dir.app>${staging.dir}/appfiles</staging.dir.app>-->
+<!--    </properties>-->
 
     <build>
         <plugins>
@@ -55,20 +55,20 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.codehaus.izpack</groupId>
-                <artifactId>izpack-maven-plugin</artifactId>
-                <extensions>true</extensions>
-                <configuration>
-                    <baseDir>${staging.dir.app}</baseDir>
-                    <installFile>${izpack.dir.app}/install.xml</installFile>
-                    <outputDirectory>${project.build.directory}</outputDirectory>
-                    <finalName>AntiHab_Alpha_2.0</finalName>
-                    <mkdirs>true</mkdirs>
-                    <autoIncludeUrl>false</autoIncludeUrl>
-                    <autoIncludeDevelopers>false</autoIncludeDevelopers>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.izpack</groupId>-->
+<!--                <artifactId>izpack-maven-plugin</artifactId>-->
+<!--                <extensions>true</extensions>-->
+<!--                <configuration>-->
+<!--                    <baseDir>${staging.dir.app}</baseDir>-->
+<!--                    <installFile>${izpack.dir.app}/install.xml</installFile>-->
+<!--                    <outputDirectory>${project.build.directory}</outputDirectory>-->
+<!--                    <finalName>AntiHab_Alpha_2.0</finalName>-->
+<!--                    <mkdirs>true</mkdirs>-->
+<!--                    <autoIncludeUrl>false</autoIncludeUrl>-->
+<!--                    <autoIncludeDevelopers>false</autoIncludeDevelopers>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
@@ -92,14 +92,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.18</version>
-        </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/org.codehaus.izpack/izpack-standalone-compiler -->
-        <dependency>
-            <groupId>org.codehaus.izpack</groupId>
-            <artifactId>izpack-standalone-compiler</artifactId>
-            <version>4.3.5</version>
         </dependency>
 
 

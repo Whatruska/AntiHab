@@ -34,7 +34,6 @@
     <orderEntry type="library" name="Maven: org.apache.ant:ant-launcher:1.8.2" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.18" level="project" />
     <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.izpack:izpack-standalone-compiler:4.3.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-compiler-plugin:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:3.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven:maven-model:3.0" level="project" />
