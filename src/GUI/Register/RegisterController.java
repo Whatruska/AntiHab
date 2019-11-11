@@ -74,7 +74,7 @@ public class RegisterController extends Controller {
         CSSManager.setNormal(passwordField);
         CSSManager.setNormal(confirmPasswordField);
         if (surnameField.getText().equalsIgnoreCase("")){
-            CSSManager.setError(loginField);
+            CSSManager.setError(surnameField);
             return SURNAME_IS_EMPTY;
         } else if (nameField.getText().equalsIgnoreCase("")){
             CSSManager.setError(nameField);

@@ -38,7 +38,7 @@ public class ChangeLoginController extends AuthorizedController {
                 if (validate()) {
                     hide();
                     getClient().setLogin(changeLoginField.getText());
-                    UserManager.updateUser(getClient());
+                    UserManager.updateLogin(getClient());
                     showNewFXMLByName("Settings");
                 }
             } catch (SQLException e) {

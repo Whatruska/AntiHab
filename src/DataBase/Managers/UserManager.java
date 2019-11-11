@@ -84,6 +84,25 @@ public class UserManager extends Manager {
         Executor.execute(sql);
     }
 
+    public static void updateLogin(User user) throws SQLException {
+        String sql = UPDATE_SQL;
+
+        sql = addParamToSql(sql, user.getLogin());
+
+        sql = addParamToSql(sql, user.getSurname());
+        sql = addParamToSql(sql, user.getName());
+
+        sql = addParamToSql(sql, user.isAdmin() ? "1" : "0");
+        sql = addParamToSql(sql, Integer.toString(user.getBottomLimit()));
+        sql = addParamToSql(sql, Integer.toString(user.getTopLimit()));
+
+        sql = addParamToSql(sql, taskListToString(user.getTasks()));
+
+        sql += " WHERE SURNAME = \"" + user.getSurname() + "\"";
+
+        Executor.execute(sql);
+    }
+
     public static int getIDByLogin(String login) throws SQLException {
         int id = 0;
         String sql = "SELECT `ID` FROM `USERS` WHERE LOGIN = '" + login + "'";
