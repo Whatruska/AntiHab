@@ -1,0 +1,87 @@
+/*
+
+    white : #F0F0F0
+    black : #080A03
+    purple : #7955A3
+
+*/
+
+.main{
+    -fx-background-color: #F0F0F0;
+}
+
+.btn{
+    -fx-border-radius: 30px;
+    -fx-background-color: #080A03;
+    -fx-text-fill: #F0F0F0;
+}
+
+.btn-out{
+    -fx-background-color: #7955A3;
+}
+
+.btn-out:hover{
+    -fx-background-color: #F0F0F0 !important;
+    -fx-text-fill: #080A03;
+}
+
+.text-field{
+    -fx-padding: 5px 10px;
+    -fx-background-color: #F0F0F0;
+    -fx-border-radius: 50% !important;
+    -fx-alignment: top-center;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-text-fill: black;
+}
+
+.text-field-change-login{
+    -fx-min-height: 60px;
+    -fx-min-width: 400px;
+    -fx-font-size: 32px;
+}
+
+.btn:hover{
+    -fx-background-color: #7955A3;
+}
+
+.btn-get-task:hover{
+    -fx-background-color: #30a53e;
+}
+
+.btn-reject-task:hover{
+    -fx-background-color: #b32620;
+}
+
+.btn-setting:hover{
+    -fx-background-color: #888888;
+}
+
+.btn-change{
+    -fx-min-width: 200px;
+    -fx-min-height: 60px;
+}
+
+.spinner{
+    -fx-min-width: 216px;
+    -fx-min-height: 38px;
+    -fx-font-size: 20px;
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button{
+    -fx-body-color : #080A03;
+    -fx-border-width : 0px;
+}
+
+.spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover{
+    -fx-body-color : #7955A3;
+}
+
+.spinner .increment-arrow-button:pressed, .spinner .decrement-arrow-button:pressed{
+    -fx-body-color : #F0F0F0;
+}
+
+.spinner .increment-arrow-button .increment-arrow, .spinner .decrement-arrow-button .decrement-arrow{
+    -fx-body-color : #F0F0F0;
+}
+

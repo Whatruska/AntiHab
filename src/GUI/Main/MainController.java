@@ -91,6 +91,10 @@ public class MainController extends AuthorizedController {
             showNewFXMLByName("GetNewTask");
         });
 
+        webView.setOnMouseClicked(event -> {
+            webView.getEngine().load(comboBox.getValue().getUrl());
+        });
+
         rejectTaskButton.setOnAction(event -> {
             try {
                 setWindow(webView.getScene().getWindow());
@@ -99,9 +103,10 @@ public class MainController extends AuthorizedController {
                 TaskManager.reassignTaskFromUser(getClient(), currentTask);
                 taskList.remove(currentTask);
                 comboBox.setItems(taskList);
-                if (taskList.size() == 0){
-                    comboBox.setValue(null);
+                if (taskList.size() == 0) {
+                    taskList.add(new Task());
                 }
+                comboBox.setValue(taskList.get(0));
                 reload();
             } catch (SQLException e) {
                 hide();
@@ -118,21 +123,23 @@ public class MainController extends AuthorizedController {
 
     private void reload(){
         Task task = comboBox.getValue();
-        if (task == null){
+        if (task == null || !task.isOcupied()){
             task = new Task();
             task.setUrl("");
             task.setNumber(0);
         }
         urlRef.setText(task.getUrl());
         WebEngine engine = webView.getEngine();
-        try {
-            if (task.getNumber() != 0) {
-                Parser.parseTaskFormNumber(task.getNumber());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        String url = HTMLManager.getPathToHTMLTask();
+//        try {
+//            if (task.getNumber() != 0) {
+//                //Parser.parseTaskFormNumber(task.getNumber());
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+        String url = task.getUrl();
+        //String url = HTMLManager.getPathToHTMLTask();
         if (task.getNumber() == 0){
             url = HTMLManager.getPathtoStartPage();
         }

@@ -7,22 +7,66 @@
     <groupId>AntiHab</groupId>
     <artifactId>AntiHab</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <packaging>izpack-jar</packaging>
+
+    <properties>
+        <!-- Installer variables -->
+        <staging.dir>${project.build.directory}/staging</staging.dir>
+        <info.appName>My Killer Application</info.appName>
+        <info.appsubpath>my-killer-app/standard</info.appsubpath>
+        <izpack.dir.app>${basedir}/izpack</izpack.dir.app>
+        <staging.dir.app>${staging.dir}/appfiles</staging.dir.app>
+    </properties>
+
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>com.zenjava</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>8.8.3</version>
                 <configuration>
+                    <vendor>YourCompany</vendor>
                     <mainClass>GUI.Loader</mainClass>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+                            <mainClass>GUI.Loader</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.izpack</groupId>
+                <artifactId>izpack-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <baseDir>${staging.dir.app}</baseDir>
+                    <installFile>${izpack.dir.app}/install.xml</installFile>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                    <finalName>AntiHab_Alpha_2.0</finalName>
+                    <mkdirs>true</mkdirs>
+                    <autoIncludeUrl>false</autoIncludeUrl>
+                    <autoIncludeDevelopers>false</autoIncludeDevelopers>
                 </configuration>
             </plugin>
         </plugins>
@@ -36,20 +80,28 @@
             <version>14-ea+2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/javafx-packager/javafx-packager -->
+        <!-- https://mvnrepository.com/artifact/net.sf.launch4j/launch4j -->
         <dependency>
-            <groupId>javafx-packager</groupId>
-            <artifactId>javafx-packager</artifactId>
-            <version>1.8.0_20</version>
+            <groupId>net.sf.launch4j</groupId>
+            <artifactId>launch4j</artifactId>
+            <version>3.12</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.18</version>
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/maven/maven-jar-plugin -->
+        <!-- https://mvnrepository.com/artifact/org.codehaus.izpack/izpack-standalone-compiler -->
         <dependency>
-            <groupId>maven</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>1.8.1</version>
+            <groupId>org.codehaus.izpack</groupId>
+            <artifactId>izpack-standalone-compiler</artifactId>
+            <version>4.3.5</version>
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
         <dependency>
@@ -57,24 +109,16 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.8.1</version>
         </dependency>
+
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>1.11.2</version>
         </dependency>
-        <dependency>
-            <groupId>javafx-packager</groupId>
-            <artifactId>javafx-packager</artifactId>
-            <version>1.8.0_20</version>
-        </dependency>
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>14-ea+2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx</artifactId>
             <version>14-ea+2</version>
         </dependency>
 

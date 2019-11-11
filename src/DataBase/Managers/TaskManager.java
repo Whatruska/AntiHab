@@ -135,14 +135,14 @@ public class TaskManager extends Manager {
     }
 
     public static int reassignTaskFromUser(User user, Task task) throws SQLException {
-        if (task.isOcupied()){
-            user.removeTask(task);
-            task.setOcupied(false);
-            UserManager.updateUser(user);
-            updateTask(task);
-            return 0;
-        }
-        return -1;
+            if (task.isOcupied()) {
+                user.removeTask(task);
+                task.setOcupied(false);
+                UserManager.updateUser(user);
+                updateTask(task);
+                return 0;
+            }
+            return -1;
     }
 
     private static Task buildTaskFromSet(ResultSet set) throws SQLException {
